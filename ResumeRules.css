@@ -1,0 +1,143 @@
+/* Artiom Tsimkin - Resume, Computer Engineering, University of Waterloo (CSS file) */
+
+
+/* Body */
+
+body{
+	font-family: "Calibri";
+	color: #333333;
+	position: relative;
+	background-color: #FAFAFA;
+	font-size: 120%;
+	padding-left: 2%;
+	padding-right: 1%;
+	margin: none;
+	background-image:url(signature_background.jpg);
+	background-size: 85%;
+	background-repeat:no-repeat;
+	background-position: 100% 40%;
+	background-attachment: fixed;
+}
+
+
+/* Titles */
+
+h1 {
+	color: black;
+	font-family: "Rockwell";
+	font-size: 400%;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+h2 {
+	color: black;
+	font-family: "Rockwell";
+	font-size: 200%;
+	padding: 0px;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+	
+h3 {
+	color: #595959;
+	font-size: 100%;
+	font-weight: 400;
+	padding: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+h4 {
+	color: #222222;
+	font-size: 135%;
+	font-family: "Rockwell";
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* Ids */
+
+#skills1, #skills2,
+#experience1, #experience2, #experience3, #experience4,
+#education1, #education2, #education3,
+#activities {
+	position: relative;
+	padding: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: #333333;
+}
+
+span{
+	color: #007FAB;
+}
+
+
+/* Links */
+
+a:link{
+	color: black;
+	font-style: none;
+	text-decoration: none;
+}
+
+a:visited{
+	color: black;
+	font-style: none;
+}
+
+a:hover{
+	color: blue;
+	text-decoration: underline;
+	font-style: none;
+}
+
+a:active{
+	color: red;
+	font-style: none;
+}
+
+
+/* Icons */
+
+.info{
+	display: row;
+	flex-direction: row;
+	text-decoration: underline black;
+	position: absolute;
+	padding: 0px;
+	left: 55%;
+	top: 1%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+
+}
+
+.address, .email, .linkedin{
+
+	display: row;
+	flex-direction: row;
+	margin-top: 10px;
+
+}
+
+img.addressIMG, img.emailIMG, img.linkedinIMG{
+
+	position: relative;
+	top: 5px;
+	right: 5px;
+	height: 23px;
+	width: 23px
+}
+
+ul {
+    list-style-image: url('list.png');
+}
+
+
+/* footer */
+
+footer{
+	font-size: 70%;

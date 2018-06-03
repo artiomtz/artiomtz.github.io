@@ -13,9 +13,9 @@ body{
 	padding-right: 1%;
 	margin: none;
 	background-image:url(signature_background.jpg);
-	background-size: 85%;
+	background-size: 30%;
 	background-repeat:no-repeat;
-	background-position: 100% 40%;
+	background-position: 100% 0%;
 	background-attachment: fixed;
 }
 
@@ -108,7 +108,7 @@ a:active{
 	text-decoration: underline black;
 	position: absolute;
 	padding: 0px;
-	left: 55%;
+	left: 50%;
 	top: 1%;
 	margin-bottom: 0px;
 	margin-top: 0px;

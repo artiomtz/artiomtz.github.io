@@ -12,7 +12,10 @@ body{
 	padding-left: 2%;
 	padding-right: 1%;
 	margin: none;
+	background-image:url(signature_background.jpg);
+	background-size: 300px;
 	background-repeat:no-repeat;
+	background-position: 100% 100%;
 	background-attachment: absolute;
 }
 

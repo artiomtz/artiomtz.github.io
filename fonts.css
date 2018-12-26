@@ -38,6 +38,7 @@ body{
 
 .jumbotron {
 	color: red;
+	font-size: 280%;
 	background: url(pics/backgrounds/Top_Background.jpg) no-repeat center fixed;
 	background-size: cover;
 	font-family: "Papyrus","Waiting for the Sunrise","Viner Hand ITC","Kristen ITC","Times New Roman";
@@ -46,17 +47,12 @@ body{
 	box-shadow: 0 2px 4px rgba(0,0,0,.25);
     text-shadow: -1px -1px 1px #000, 1px 1px 1px #000;
 	border-radius: 10px;
-	position: relative;
-	top: 0px;
 }
+
 
 .container {
 	border-radius: 10px;
 	padding: 20px;
-}
-
-#top {
-	font-size: 280%;
 }
 
 .nav {
@@ -111,7 +107,7 @@ a {
     text-shadow: 0px -1px 1px #000;
 	font-family: "Papyrus","Waiting for the Sunrise","Viner Hand ITC","Kristen ITC","Times New Roman";
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 40%;
 }
 
 #animationCopyRight {

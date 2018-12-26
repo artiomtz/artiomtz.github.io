@@ -48,16 +48,6 @@ body{
 	border-radius: 10px;
 }
 
-#useChrome {
-	text-align: right;
-	font-family: "Do Hyeon","Gloria Hallelujah","Viner Hand ITC","Comic Sans MS","Arial";
-	color: #75751E;
-	position: relative;
-	right: 15px;
-	bottom: 27px;
-	font-size: 80%;
-}
-
 .container {
 	border-radius: 10px;
 	padding: 20px;

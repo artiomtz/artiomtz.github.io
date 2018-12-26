@@ -20,8 +20,7 @@ var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
 var isIOSChrome = winNav.userAgent.match("CriOS");
 
 if (isIOSChrome) {
-   // is Google Chrome on IOS
-   document.getElementById("useChrome").innerHTML = "";
+   // is Google Chrome on IOS - not alert
 } else if(
   isChromium !== null &&
   typeof isChromium !== "undefined" &&
@@ -29,11 +28,10 @@ if (isIOSChrome) {
   isOpera === false &&
   isIEedge === false
 ) {
-   // is Google Chrome
-   document.getElementById("useChrome").innerHTML = "";
+   // is Google Chrome - not alert
 } else { 
    // not Google Chrome
-   document.getElementById("useChrome").innerHTML = "Keep cool and use Chrome";
+   alert("Keep calm and use Chrome.");
 }
 	
 	

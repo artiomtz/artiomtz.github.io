@@ -50,7 +50,7 @@ function waitLoad() {
 	var map = new mapboxgl.Map({
 		container: 'map', // container id
 		style: 'mapbox://styles/mapbox/streets-v9',
-		center: [-80.539,43.467], // starting position
+		center: [-80.543,43.469], // starting position
 		zoom: 13 // starting zoom
 	});
 	map.addControl(new mapboxgl.NavigationControl()); // Add zoom and rotation controls to the map.

@@ -43,6 +43,19 @@ function waitLoad() {
 	//code to be executed after delay
 	type1();
 	}, delayInMilliseconds);
+	
+	
+	
+	
+		var mymap = L.map('mapid').setView([43.468889,-80.54], 15);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYXJ0aW9tdHoiLCJhIjoiY2pxNXMwODliMjd3bzQzc2I2dXIyZ3B1dSJ9.iRENPZbY6-feUHjiWjcf8Q'
+}).addTo(mymap);
+
 }
 
 
@@ -57,8 +70,8 @@ function BackAnimation() {
 		anime({
 		targets: pathEl,
 		strokeDashoffset: [offset, 0],
-		duration: anime.random(1000, 3000),
-		delay: anime.random(0, 2000),
+		duration: anime.random(1500, 4000),
+		delay: anime.random(1000, 2000),
 		loop: true,
 		direction: 'alternate',
 		easing: 'easeInOutSine',
@@ -134,10 +147,14 @@ function copytext(element) {
 
 
 // map
-function myMap() {
-	var mapProp= {
-		center:new google.maps.LatLng(43.468889,-80.54),
-		zoom:14,
-	};
-	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
+////////function myMap() {
+//	var mapProp= {
+//		center:new google.maps.LatLng(43.468889,-80.54),
+//		zoom:14,
+//	};
+//	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	
+	
+	
+
+//}

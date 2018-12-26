@@ -44,18 +44,16 @@ function waitLoad() {
 	type1();
 	}, delayInMilliseconds);
 	
-	
-	
-	
-		var mymap = L.map('mapid').setView([43.468889,-80.54], 15);
 
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoiYXJ0aW9tdHoiLCJhIjoiY2pxNXMwODliMjd3bzQzc2I2dXIyZ3B1dSJ9.iRENPZbY6-feUHjiWjcf8Q'
-}).addTo(mymap);
-
+	// map
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYXJ0aW9tdHoiLCJhIjoiY2pxNXMwODliMjd3bzQzc2I2dXIyZ3B1dSJ9.iRENPZbY6-feUHjiWjcf8Q';
+	var map = new mapboxgl.Map({
+		container: 'map', // container id
+		style: 'mapbox://styles/mapbox/streets-v9',
+		center: [-80.539,43.467], // starting position
+		zoom: 13 // starting zoom
+	});
+	map.addControl(new mapboxgl.NavigationControl()); // Add zoom and rotation controls to the map.
 }
 
 
@@ -144,17 +142,3 @@ function copytext(element) {
 	$temp.remove();
 	alert("Copied :)");
 }
-
-
-// map
-////////function myMap() {
-//	var mapProp= {
-//		center:new google.maps.LatLng(43.468889,-80.54),
-//		zoom:14,
-//	};
-//	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-	
-	
-	
-
-//}

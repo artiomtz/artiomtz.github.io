@@ -384,7 +384,7 @@ ul {
 	height: 200px;
 	width: 300px;
 	position: relative;
-	left: 3%;
+	left: 5%;
 	box-shadow: 0 3px 8px rgba(0,0,0,.25);
 	border-radius: 10px;
 }
@@ -403,8 +403,8 @@ button {
     white-space: nowrap;
 	margin-right: 3px;
     padding-right: 3px;
-	margin-left: 1px;
-    padding-left: 1px;
+	margin-left: 0px;
+    padding-left: 0px;
 }
 
 #contacts > li {

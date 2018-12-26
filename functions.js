@@ -10,45 +10,51 @@ var speed2 = 50;
 
 // wait for home to load
 function waitLoad() {
+	
+	BackAnimation();
 
-//check browser
-var isChromium = window.chrome;
-var winNav = window.navigator;
-var vendorName = winNav.vendor;
-var isOpera = typeof window.opr !== "undefined";
-var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
-var isIOSChrome = winNav.userAgent.match("CriOS");
+	//check browser
+	var isChromium = window.chrome;
+	var winNav = window.navigator;
+	var vendorName = winNav.vendor;
+	var isOpera = typeof window.opr !== "undefined";
+	var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+	var isIOSChrome = winNav.userAgent.match("CriOS");
 
-if (isIOSChrome) {
-   // is Google Chrome on IOS - not alert
-} else if(
-  isChromium !== null &&
-  typeof isChromium !== "undefined" &&
-  vendorName === "Google Inc." &&
-  isOpera === false &&
-  isIEedge === false
-) {
-   // is Google Chrome - not alert
-} else { 
-   // not Google Chrome
-   alert("Keep calm and use Chrome.");
+	if (isIOSChrome) {
+	   // is Google Chrome on IOS - not alert
+	} else if(
+	  isChromium !== null &&
+	  typeof isChromium !== "undefined" &&
+	  vendorName === "Google Inc." &&
+	  isOpera === false &&
+	  isIEedge === false
+	) {
+	   // is Google Chrome - not alert
+	} else { 
+	   // not Google Chrome
+	   alert("Keep calm and use Chrome.");
+	}
+	
+	
+	//type title
+	var delayInMilliseconds = 3000; // delay
+	setTimeout(function() {
+	//code to be executed after delay
+	type1();
+	}, delayInMilliseconds);
 }
-	
-	
-//type title
-var delayInMilliseconds = 3000; // delay
-		setTimeout(function() {
-		  type1(); //code to be executed after delay
-		}, delayInMilliseconds);
 
 
-// background animation		
+// background animation
+function BackAnimation() {
 	var pathEls = document.querySelectorAll('path');
 	for (var i = 0; i < pathEls.length; i++) {
-	  var pathEl = pathEls[i];
-	  var offset = anime.setDashoffset(pathEl);
-	  pathEl.setAttribute('stroke-dashoffset', offset);
-	  anime({
+		var pathEl = pathEls[i];
+		var offset = anime.setDashoffset(pathEl);
+		
+		pathEl.setAttribute('stroke-dashoffset', offset);
+		anime({
 		targets: pathEl,
 		strokeDashoffset: [offset, 0],
 		duration: anime.random(1000, 3000),
@@ -57,7 +63,7 @@ var delayInMilliseconds = 3000; // delay
 		direction: 'alternate',
 		easing: 'easeInOutSine',
 		autoplay: true
-	  });
+		});
 	}
 }
 

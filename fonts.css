@@ -15,16 +15,9 @@
 }
 
 body{
-	background: url(pics/backgrounds/Background.jpg) no-repeat center fixed; 
-    background-size: cover;
+	background: url(pics/backgrounds/Background.jpg) repeat;
+	background-size: 100%;
 	position: relative;
-}
-
-@media screen and (orientation: portrait) {
-	body {
-		background: url(pics/backgrounds/MobileBackground.jpg) repeat top;
-		background-size: 100%;
-	}
 }
 
 .anim, .anim svg {

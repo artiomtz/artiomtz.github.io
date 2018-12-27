@@ -22,7 +22,7 @@ body{
 
 @media screen and (max-width:768px) {
 	body {
-		background: url(pics/backgrounds/Background.jpg) no-repeat center;
+		background: url(pics/backgrounds/Background.jpg);
 	}
 }
 

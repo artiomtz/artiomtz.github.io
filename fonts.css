@@ -22,16 +22,9 @@ body{
 
 @media screen and (max-width: 767px) {   
     body{
-    	background-size: initial;
+    	background: url(pics/backgrounds/MobileBackground.jpg) no-repeat center fixed; 
     } 
 }
-
-@media (min-width: 1200px) {    
-     body{         
-         background-size: cover;
-     } 
-}
-
 
 .anim, .anim svg {
 	position: relative;

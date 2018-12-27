@@ -349,9 +349,9 @@ ul {
 }
 
 .fa {
-    padding: 20px;
+    padding: 15px;
     font-size: 50px;
-    width: 90px;
+    width: 80px;
     text-align: center;
     text-decoration: none;
 	border-radius: 50%;
@@ -381,7 +381,7 @@ ul {
 
 #map {
 	height: 200px;
-	width: 300px;
+	width: 280px;
 	box-shadow: 0 3px 8px rgba(0,0,0,.25);
 	border-radius: 10px;
 }

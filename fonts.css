@@ -129,6 +129,7 @@ a {
 @media screen and (max-width:767px) {
 	#home {
 		background: url(pics/backgrounds/Mobile_Home_Background.jpg) no-repeat;
+		background-size: auto 100%;
 	}
 }
 

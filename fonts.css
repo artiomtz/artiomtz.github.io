@@ -126,6 +126,13 @@ a {
 	color :black;
 }
 
+@media screen and (max-width:767px) {
+	#home {
+		background: url(pics/backgrounds/Mobile_Home_Background.jpg) no-repeat fixed;
+		background-size: 100% 100%;
+	}
+}
+
 #GeneralTitle1 {
 	font-family: "Permanent Marker","Kristen ITC","Comic Sans MS","Arial";
 	font-weight: bold;

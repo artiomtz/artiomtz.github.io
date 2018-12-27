@@ -22,7 +22,7 @@ body{
 
 @media screen and (max-width: 767px) {   
     body{
-    	background-size: contain;
+    	background-size: initial;
     } 
 }
 

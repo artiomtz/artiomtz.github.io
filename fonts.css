@@ -126,20 +126,6 @@ a {
 	color :black;
 }
 
-@media screen and (max-width:767px) {
-	#home {
-		background: url(pics/backgrounds/Mobile_Home_Background.jpg) no-repeat;
-		background-size: cover;
-	}
-}
-
-@media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
-	#home {
-		background: url(pics/backgrounds/Home_Background.jpg) no-repeat;
-		background-size: auto 100%;
-	}
-}
-
 #GeneralTitle1 {
 	font-family: "Permanent Marker","Kristen ITC","Comic Sans MS","Arial";
 	font-weight: bold;

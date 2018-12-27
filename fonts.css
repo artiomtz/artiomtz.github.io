@@ -354,6 +354,13 @@ ul {
 	box-shadow: 0 2px 4px rgba(0,0,0,.25);
 }
 
+@media screen and (orientation:portrait) {
+	#Contact {
+		background: url(pics/backgrounds/Mobile_Contact_Background.jpg) no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
 #GeneralTitle4 {
 	font-family: "Permanent Marker","Kristen ITC","Comic Sans MS","Arial";
 	font-weight: bold;

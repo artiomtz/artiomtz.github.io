@@ -128,6 +128,7 @@ a {
 
 @media screen and (orientation: portrait) {
 	#home {
+		background: url(pics/backgrounds/Home_Background.jpg) no-repeat top;
 		background-size: auto 100%;
 	}
 }

@@ -20,6 +20,12 @@ body{
 	position: relative;
 }
 
+@media screen and (max-width: 767px) {   
+    body{
+    	background: url(pics/backgrounds/MobileBackground.jpg) no-repeat center fixed; 
+    } 
+}
+
 .anim, .anim svg {
 	position: relative;
 	bottom: 50px;

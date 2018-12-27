@@ -22,7 +22,7 @@ body{
 
 @media screen and (orientation: portrait) {
 	body {
-		background: url(pics/backgrounds/MobileBackground.jpg) no-repeat top;
+		background: url(pics/backgrounds/MobileBackground.jpg);
 	}
 }
 

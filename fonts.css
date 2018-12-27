@@ -285,6 +285,13 @@ ul {
 	color: LightGray;
 }
 
+@media screen and (orientation:portrait) {
+	#Projects {
+		background: url(pics/backgrounds/Mobile_Projects_Background.jpg) repeat;
+		background-size: 100%;
+	}
+}
+
 #GeneralTitle3 {
 	font-family: "Mali","Kristen ITC","Comic Sans MS","Arial";
 	font-weight: bold;

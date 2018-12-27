@@ -23,6 +23,7 @@ body{
 @media screen and (orientation: portrait) {
 	body {
 		background: url(pics/backgrounds/MobileBackground.jpg) repeat;
+		background-size: cover;
 	}
 }
 

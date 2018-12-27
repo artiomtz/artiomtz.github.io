@@ -11,8 +11,6 @@ var speed2 = 50;
 // wait for home to load
 function waitLoad() {
 	
-	BackAnimation();
-
 	//check browser
 	var isChromium = window.chrome;
 	var winNav = window.navigator;
@@ -36,6 +34,7 @@ function waitLoad() {
 	   alert("Keep calm and use Chrome.");
 	}
 	
+	BackAnimation(); // run background animation
 	
 	//type title
 	var delayInMilliseconds = 3000; // delay
@@ -68,8 +67,8 @@ function BackAnimation() {
 		anime({
 		targets: pathEl,
 		strokeDashoffset: [offset, 0],
-		duration: anime.random(1500, 4000),
-		delay: anime.random(1000, 2000),
+		duration: anime.random(2000, 4000),
+		delay: anime.random(0000, 2000),
 		loop: true,
 		direction: 'alternate',
 		easing: 'easeInOutSine',

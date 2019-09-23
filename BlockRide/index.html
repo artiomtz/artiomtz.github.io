@@ -1,0 +1,82 @@
+<!-- Artiom Tsimkin - BlockRide: JS game -->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="Rules.css">
+	<script src="functions.js"></script>
+		
+	</head>
+
+	<!---------------------------------------------------------------------------------------------------->
+	
+	<body onload="gameLoad()">
+	
+		<img src="pics/back.png" id="back">
+		
+		<div id ="screen">
+		
+			<img src="pics/storm.gif" id="storm">
+			<div id ="touchL" onmousedown="touchLeft()" onmouseup="moveRelease()"></div>
+			<div id ="touchR" onmousedown="touchRight()" onmouseup="moveRelease()"></div>
+			<img id ="car">
+			
+			<div id = "board">
+				<div> Score: <span id="score"></span></div>
+				<div> Level: <span id="gamelevel"></span></div>
+				<div> Lives: <span id="lives"></span></div>
+			</div>
+			
+			<img src="pics/b1.png" id ="block1">
+			<img src="pics/b2.png" id ="block2">
+			<img src="pics/b3.png" id ="block3">
+			<img src="pics/b4.png" id ="block4">
+			<img src="pics/b5.png" id ="block5">
+			<img src="pics/b6.png" id ="block6">
+			<img src="pics/b7.png" id ="block7">
+			<img src="pics/b8.png" id ="block8">
+			<img src="pics/b9.png" id ="block9">
+			<img src="pics/b10.png" id ="block10">
+			<img src="pics/b11.png" id ="block11">
+			<img src="pics/b12.png" id ="block12">
+			
+			<img src="pics/m1.png" id ="cloud1">
+			<img src="pics/m2.png" id ="cloud2">
+			<img src="pics/m3.png" id ="cloud3">
+			<img src="pics/m4.png" id ="cloud4">
+			<img src="pics/m5.png" id ="cloud5">
+			<img src="pics/m6.png" id ="cloud6">
+			
+			<video id = "vid" src="drive.mp4" muted>
+			
+		</div>
+		
+		<h1 id="title">BlockRide</h1>
+		<p id="title2">Move around to avoid rocks</p>
+		
+		<button onclick="buttonClick()" id="button">GO</button>
+		
+	</body>
+	
+</html>
+
+
+
+<!--- CREDITS: ---
+
+	Car image - 123rf
+	
+	Background video - November Fox
+
+	Clouds gif - Giphy
+	
+	Music - Dj Roman Tomashek
+	
+	Crash sound - n Beats
+	
+--->

@@ -205,7 +205,7 @@ img#myPic:hover {
 .skill1 {width: 70%; background-color: #b366ff;}
 .skill2 {width: 60%; background-color: #2196F3;}
 .skill3 {width: 50%; background-color: #4CAF50;}
-.skill4 {width: 50%; background-color: #ffff4d;}
+.skill4 {width: 45%; background-color: #ffff4d;}
 .skill5 {width: 40%; background-color: #ff9900;}
 .skill6 {width: 25%; background-color: #f44336;}
 
@@ -407,10 +407,11 @@ ul {
 }
 
 #map {
-	height: 200px;
-	width: 280px;
+	height: 220px;
+	width: 290px;
 	box-shadow: 0 3px 8px rgba(0,0,0,.25);
 	border-radius: 10px;
+	left: 8%;
 }
 
 button {

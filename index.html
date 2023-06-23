@@ -2,790 +2,1553 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Artiom Tsimkin</title>
-	<link rel="icon" type="image/gif/png/jpg" href="pics/transparent_title.png">
+  <head>
+    <title>Artiom Tsimkin</title>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<link rel="stylesheet" href="https://codepen.io/juliangarnier/pen/EWxgGx">
-	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Permanent+Marker|Rock+Salt|Do+Hyeon|Waiting+for+the+Sunrise|Crete+Round|M+PLUS+1p|Mali" rel="stylesheet">
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<script src="https://codepen.io/juliangarnier/pen/yMLaRG"></script>
-	
-	
-	<script src="animation/anime.min.js"></script>
-	<script src="functions.js"></script>
-	<link rel="stylesheet" type="text/css" href="fonts.css">
-	
-	<meta name="description" content="Artiom Tsimkin, Computer Engineering, University of Waterloo, Canada." />
-	<meta name="keywords" content="Artiom, Tsimkin, Artiom Tsimkin, Waterloo, UWaterloo, ECE, Computer Engineering, Engineering" />
-	<meta name="robots" content="index,follow" />
-</head>
+    <link
+      rel="icon"
+      type="image/gif/png/jpg"
+      href="pics/transparent_title.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Permanent+Marker|Rock+Salt|Do+Hyeon|Waiting+for+the+Sunrise|Crete+Round|M+PLUS+1p|Mali"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
 
-<!-------------------------------------------------- Body -------------------------------------------------->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+    <script src="animation/anime.min.js"></script>
+    <script src="functions.js"></script>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="waitLoad()" id="wrapper">
-<div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; -o-user-select: none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">
-	<div class="container">
-		<div class="background">
-			<div class="anim" id="animation">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800"><g fill="none" fill-rule="evenodd"><path stroke="#31B495" d="M781.02 488.77v69.78c0 1.08-.88 1.96-1.97 1.96l-135.12-.04c-1.09 0-2.6.62-3.38 1.39l-39.23 38.96a5.52 5.52 0 0 1-3.37 1.4h-75.38a1.97 1.97 0 0 1-1.97-1.97v-33.5"/><path stroke="#F4D21F" d="M674.88 355.57l45.54-45.24a5.42 5.42 0 0 0 1.39-3.35l-.06-10.38c0-1.08-.63-2.58-1.4-3.35l-43.38-43.07a1.94 1.94 0 0 1 0-2.77l82.83-82.25a5.52 5.52 0 0 1 3.37-1.4l44.94.1c1.08 0 2.6-.62 3.37-1.37L952.5 22.65"/><path stroke="#1AACA8" d="M507-76.68v265.47a4 4 0 0 0 4 3.99H566c1.08 0 1.97.88 1.97 1.96v147.5c0 1.08-.63 2.59-1.4 3.35l-47.9 47.4a5.45 5.45 0 0 0-1.4 3.34c0 2.25.64 3.76 1.4 4.53l53.82 53.26c.77.76 1.76 1.39 2.19 1.39.43 0 .79.88.79 1.96v70.17c0 1.07-.89 1.96-1.97 1.96l-85.81-.04c-1.09 0-2.6.62-3.38 1.39l-1.55 1.54a5.52 5.52 0 0 1-3.38 1.4h-9.29"/><path stroke="#1F8C43" d="M8 127.82v391.06a4.04 4.04 0 0 0 4 4.04L140.8 524"/><path stroke="#1AA5D0" d="M894.01 374l49.8-49.44a5.52 5.52 0 0 1 3.37-1.4h92.41c1.09 0 2.6.63 3.38 1.4l27.18 26.99"/><path stroke="#1AA5D0" d="M894.01 374l49.8-49.44a5.52 5.52 0 0 1 3.37-1.4h92.41c1.09 0 2.6.63 3.38 1.4l27.18 26.99"/><path stroke="#1F8C43" d="M755.16 213.9l70.82.04c1.08 0 2.6-.63 3.37-1.4l91.61-90.97a5.52 5.52 0 0 1 3.37-1.39h77.07l-71.29-72.13a5.45 5.45 0 0 1-1.4-3.35V16.87"/><path stroke="#9DCA40" d="M261.78-52.44l11.16 11.08c.77.77 1.4 2.28 1.4 3.35V-5L156.7 111.03l-85.4 84.8a5.45 5.45 0 0 0-1.4 3.35v100.67c0 1.08.89 1.96 1.97 1.96h50.4c1.09 0 1.98.88 1.98 1.96l.07 26.92c0 1.07.9 1.96 1.98 1.96l335.73.13c1.09 0 1.98.88 1.98 1.96v36.79l-42.99 43.78a5.52 5.52 0 0 1-3.37 1.4H385.2"/><path stroke="#DA5A98" d="M564.8 549.64v17.76c0 1.08-.64 2.59-1.4 3.35L382.28 750.6a5.52 5.52 0 0 1-3.38 1.39h-109.1c-1.09 0-1.97.88-1.97 1.96v23.37c0 1.07-.9 1.96-1.98 1.96h-83.54c-1.08 0-1.97.88-1.97 1.96v45.8c0 1.07.89 1.95 1.97 1.95h29.89c1.08 0 1.97.88 1.97 1.96v51.07c0 1.08.63 2.59 1.4 3.35l10.32 10.25c.77.76 2.29 1.39 3.37 1.39h111.77c1.09 0 1.34.62.57 1.39M482.82 656H630.9"/><path stroke="#E5683E" d="M440.53 245.87l-31.7 31.48a5.52 5.52 0 0 1-3.37 1.39h-62.37c-1.09 0-2.6.62-3.38 1.39l-2.68 3.66-264.59.02c-1.08 0-2.6-.63-3.37-1.4l-47.3-46.97a5.52 5.52 0 0 0-3.37-1.39h-57.47l-1.12-34.61c0-1.08-.63-2.59-1.4-3.35l-66.54-65.94"/><path stroke="#9F83B6" d="M705.31 221.73h7.83c1.09 0 2.6.63 3.37 1.4l45.8 45.6c.78.76 1.4 2.27 1.4 3.35v13.94c0 1.08.46 1.96 1.03 1.98.56 0 1.03.9 1.03 1.98v10.77l-.15 110.84c0 1.08-.89 1.96-1.98 1.96H628.32c-1.08 0-2.6-.63-3.37-1.4l-12.2-12.12a5.52 5.52 0 0 0-3.38-1.39h-46.18a2 2 0 0 0-2 1.96l-.17 26.74c0 1.08-.63 2.59-1.4 3.35l-8.82 8.76a5.52 5.52 0 0 1-3.37 1.39l-26.65-.06c-1.09 0-2.6.62-3.38 1.39l-48.1 47.78a5.52 5.52 0 0 1-3.38 1.39h-16.37l-79.45-.02c-1.09 0-2.6.63-3.36 1.39L220.71 639.06a5.47 5.47 0 0 1-3.35 1.4H31.06"/><path stroke="#BC6D21" d="M145.43 99.41L289.6 243.5c.77.76 2.29 1.39 3.37 1.39h146.76c1.09 0 2.6.62 3.38 1.39l31.93 31.71c.77.77 1.4 2.27 1.4 3.35V474.1c0 1.08-.63 2.59-1.4 3.35l-7.6 7.54a5.52 5.52 0 0 1-3.36 1.4h-20.62l-20.67 20.97-2.78 2.78L289.37 640a5.45 5.45 0 0 0-1.4 3.35l.16 177.85"/><path stroke="#DA1817" d="M318.82 380.62h94.88c1.09 0 2.6.63 3.38 1.39l14.97 14.87c.77.76 2.29 1.39 3.37 1.39h72.99c1.08 0 2.6.63 3.35 1.39l58.57 58.53c.77.77 2.27 1.4 3.35 1.4h103.37c1.08 0 1.97-.89 1.97-1.97v-14.7c0-1.09-.89-1.97-1.97-1.97l-6.7.02H630.1a1.97 1.97 0 0 1-1.97-1.96v-57c0-1.08-.63-2.59-1.4-3.35l-14.58-14.48a5.45 5.45 0 0 1-1.4-3.35v-17.3c0-1.07-.63-2.58-1.4-3.34L597 327.92a5.52 5.52 0 0 0-3.37-1.39h-17.4c-1.09 0-2.6-.62-3.38-1.39l-41.8-41.5a5.52 5.52 0 0 0-3.37-1.4h-41.34"/><path stroke="#9F9FA0"/><path stroke="#74BB63" d="M855.2 194.4h59.84c1.09 0 1.97.89 1.97 1.96v28.74c0 1.08.64 2.59 1.4 3.35l50.96 50.6c.77.76 1.4 2.27 1.4 3.35v101.47l105.2 104.27"/><path stroke="#DA5A98" d="M638.46 305.73L651 293.29c.77-.74.77-2 0-2.76l-31.35-31.13c-.76-.74-.76-2 0-2.76l18.53-18.4a5.52 5.52 0 0 1 3.37-1.39l160.41-.2 423.37 1.2c1.08 0 1.97.89 1.97 1.96v71.5"/><path stroke="#BC6D21" d="M438.61 486.03h-18.54c-1.08 0-2.6-.63-3.37-1.4l-74.94-74.41a5.52 5.52 0 0 0-3.37-1.4h-38.57c-1.08 0-2.6-.62-3.37-1.38l-47-46.68-36.58-.04-57 71.59a5.45 5.45 0 0 0-1.4 3.35v23.9"/><path stroke="#74BB63" d="M882.06 358.97l-46.92 46.6a5.52 5.52 0 0 1-3.38 1.39h-94.64c-1.09 0-2.6-.63-3.38-1.4l-30.6-30.33a5.52 5.52 0 0 0-3.36-1.4l-34.94.04c-1.08 0-2.6.63-3.37 1.4l-29.57 29.36a5.52 5.52 0 0 1-3.37 1.39l-14.55-14.35a5.63 5.63 0 0 0-3.42-1.4l-156.97-.25c-1.11 0-2.65.63-3.43 1.4l-27.85 27.61a5.52 5.52 0 0 1-3.38 1.4H-23.82l-88.65.2-12.44 12.35"/><path stroke="#2283BC" d="M292.9 643.74l59.56-59.12a5.52 5.52 0 0 1 3.37-1.39h23.93c1.08 0 2.6-.63 3.37-1.39l46.53-46.21a5.52 5.52 0 0 1 3.38-1.4h33.53l153.67-.01c1.08 0 1.97-.88 1.97-1.96V420.01c0-1.07-.63-2.58-1.4-3.35l-38.64-38.37a5.45 5.45 0 0 1-1.4-3.35v-51.52c0-1.08-.64-2.59-1.4-3.35L468.91 210.39a5.52 5.52 0 0 0-3.38-1.4l-180.49.2"/><path stroke="#DA5A98" d="M484.13 548.71h-37.09c-1.08 0-2.6.63-3.37 1.4l-69.02 68.54c-.77.76-.77 2 0 2.76l28.09 27.78c.77.76 2.29 1.39 3.37 1.39h62.41"/><path stroke="#31B495" d="M520.82 561.7v-4.74c0-1.08-.89-1.96-1.98-1.96h-13.21c-1.09 0-2.6-.62-3.37-1.39l-43.36-42.88a5.45 5.45 0 0 1-1.4-3.35v-190.4c0-1.08.63-2.6 1.4-3.36l20.89-20.74a5.45 5.45 0 0 0 1.4-3.35v-95.4c0-1.08-.63-2.58-1.4-3.35L292.4 4.7l-.6-40.88c0-1.08-.62-2.58-1.4-3.35L278.8-51.07"/><path stroke="#1EB2D8" d="M275.76 745h99.28c1.09 0 2.6-.63 3.38-1.4l174.33-172.75a5.52 5.52 0 0 1 3.38-1.4h46.75c1.08 0 2.6-.62 3.35-1.38l51.47-51.46a5.42 5.42 0 0 0 1.38-3.35V311.29c0-1.07-.63-2.58-1.4-3.35l-51.84-51.3a5.52 5.52 0 0 0-3.38-1.4h-17.95a1.97 1.97 0 0 1-1.97-1.95v-44.47c0-1.07-.89-1.96-1.97-1.96h-88.63a1.97 1.97 0 0 1-1.97-1.96v-19.2c0-1.07-.64-2.58-1.4-3.34L309.87 4.92"/><path stroke="#F4D21F" d="M1002.65 123.83H926.5c-1.08 0-2.6.62-3.37 1.39l-92.28 91.46a5.52 5.52 0 0 1-3.37 1.39l-131.87-.08c-1.09 0-2.6.63-3.37 1.37l-51.9 51.19c-.77.76-.77 2 0 2.76l21.22 21.1c.77.76 1.4 2.27 1.4 3.35v15.69"/><path stroke="#BE2F39" d="M672.51 437.64h54.25c1.08 0 2.6.63 3.37 1.4l49.04 48.7c.77.76 2.29 1.38 3.37 1.38h45.16c1.08 0 2.6-.62 3.37-1.39L914.39 405a5.52 5.52 0 0 1 3.37-1.4h42.22c1.08 0 2.6.63 3.37 1.4l100.8 100.1"/><path stroke="#E5683E" d="M672.51 434.31h55.63c1.08 0 2.6.63 3.37 1.4l49.14 48.8c.77.76 2.29 1.38 3.37 1.38l41.9-.04c1.08 0 2.6-.62 3.37-1.39l62.08-61.68a5.45 5.45 0 0 0 1.4-3.35l-.1-268.18c0-1.08-.63-2.59-1.4-3.35l-99.8-99.28a5.52 5.52 0 0 0-3.37-1.39H422.62c-1.08 0-2.6.63-3.37 1.4L260.28 206.3a5.52 5.52 0 0 1-3.38 1.39H127.3c-1.08 0-2.6.62-3.37 1.39l-36.71 36.45a5.45 5.45 0 0 0-1.4 3.35v185.1"/><path stroke="#1EB2D8" d="M410.1 713.73l17.53 17.42c.77.76 2.29 1.39 3.37 1.39h42.02c1.09 0 2.6-.63 3.37-1.4l26.02-25.83 123.2-.31"/><path/><path stroke="#2283BC" d="M307.34 907.08c.77-.77.52-1.4-.57-1.4H108.29a1.97 1.97 0 0 1-1.98-1.95V743.59c0-1.08.9-1.96 1.98-1.96h264.38c1.09 0 2.6-.63 3.38-1.4l23.75-23.58c.77-.76.77-2 0-2.76l-80.84-80.1c-.77-.76-.51-1.4.57-1.4h137.53c1.09 0 2.6-.62 3.38-1.38l53.63-53.26a5.52 5.52 0 0 1 3.37-1.4l88.57-.2c1.09 0 2.6-.62 3.38-1.38l55.6-55.22a5.45 5.45 0 0 0 1.4-3.35V409.93c0-1.08.9-1.96 1.98-1.96h29c1.08 0 2.6-.63 3.37-1.4l43.32-43.01a5.52 5.52 0 0 1 3.37-1.4h6.11c1.09 0 2.6-.62 3.38-1.38l53.12-52.76a5.52 5.52 0 0 1 3.37-1.39h13.6c1.08 0 2.6.63 3.37 1.4L892.79 370c.77.77 2.29 1.4 3.37 1.4h74.06c1.08 0 2.6.62 3.37 1.38l93.97 93.5"/><path stroke="#E6632A" d="M647.56 429.46v-33.62c0-1.08-.63-2.59-1.4-3.35l-31.45-31.22a5.52 5.52 0 0 0-3.37-1.4h-36.87c-1.08 0-2.6.63-3.37 1.4l-74.35 73.83a5.52 5.52 0 0 1-3.37 1.39H440.9a1.97 1.97 0 0 1-1.98-1.96v-71.5c0-1.08-.88-1.96-1.97-1.96H9.3c-1.08 0-2.6.63-3.37 1.4l-37.9 37.62a5.52 5.52 0 0 1-3.37 1.4h-57c-1.1 0-2.61.62-3.38 1.38l-13.2 13.1a5.52 5.52 0 0 1-3.37 1.4h-13.2"/><path stroke="#F4D21F" d="M219.9 357h144.49l76.54.13c1.08 0 1.97.88 1.97 1.96v71.7c0 1.08.89 1.96 1.97 1.96h46.36c1.08 0 2.6-.63 3.37-1.4l74.35-74a5.52 5.52 0 0 1 3.37-1.4h192.33c1.09 0 2.6-.62 3.37-1.38l43.58-43.28a5.52 5.52 0 0 1 3.37-1.39h10.6c1.08 0 2.6.63 3.37 1.4l62.65 62.2c.77.77 2.29 1.4 3.37 1.4h73.87c1.09 0 2.6.63 3.38 1.4l94.12 93.47 9.27.57c.84 0 2.17-.62 2.93-1.39l104.08-89.36a1.97 1.97 0 0 1 2.78 0l6.3 6.25"/><path stroke="#9DCA40" d="M599.92 564.19a6.6 6.6 0 0 0 4.04-1.67l47.94-47.6a6.5 6.5 0 0 0 1.67-4.01V313.84c0-1.3-.75-3.1-1.67-4.02l-47.94-47.6a6.6 6.6 0 0 0-4.04-1.66h-97.84a6.6 6.6 0 0 0-4.05 1.66l-47.93 47.6a6.5 6.5 0 0 0-1.68 4.02v197.07c0 1.29.75 3.1 1.68 4.01l47.93 47.6a6.6 6.6 0 0 0 4.05 1.67h97.84z"/><path stroke="#1EB2D8" d="M648.25 527.17v33.3c0 1.08-.63 2.58-1.4 3.35l-87.37 86.76c-.77.76-.51 1.39.57 1.39h70.82"/><path stroke="#BC6D21" d="M476.04 273.32v-18.86c0-1.08-.63-2.59-1.4-3.35l-30.9-30.68a5.52 5.52 0 0 0-3.37-1.4H274.62"/><path stroke="#9F83B6" d="M923.43 372.6V119.09c0-1.07-.64-2.58-1.4-3.34L757.4-47.74a5.52 5.52 0 0 0-3.37-1.39H351.57c-1.09 0-2.6.63-3.38 1.4L310.5-10.3"/><path stroke="#ED8E3F" d="M317-49.77L304.42-37.3a5.58 5.58 0 0 0-1.42 3.35l-.36 21.45a5.3 5.3 0 0 0 1.36 3.35L493.36 178.9c.77.76 1.4 2.27 1.4 3.35v18.41c0 1.08.89 1.96 1.97 1.96h87.86c1.09 0 1.98.88 1.98 1.96v34.67c0 1.08.88 1.96 1.97 1.96h23.3c1.08 0 2.6.63 3.37 1.4l46.16 45.83c.77.77 1.4 2.28 1.4 3.35v138.64l.07 84.4c0 1.08-.63 2.6-1.38 3.35l-53.63 53.27a5.52 5.52 0 0 1-3.37 1.39H557.9c-1.08 0-2.6.63-3.37 1.39L380.57 746.98a5.52 5.52 0 0 1-3.38 1.39H112.47c-1.09 0-1.97.88-1.97 1.96v93.24c0 1.08-.9 1.96-1.98 1.96h-224.54"/><path stroke="#DA5A98" d="M415.07 612.97l63.3-62.86a5.52 5.52 0 0 1 3.37-1.4h124.67c1.08 0 2.6-.6 3.37-1.37l28.23-27.83a5.35 5.35 0 0 0 1.4-3.33V478.2c0-1.07.89-1.96 1.97-1.96H694c1.09 0 1.97-.88 1.97-1.95v-52.11c0-1.08.64-2.59 1.4-3.35l29.57-29.37a5.45 5.45 0 0 0 1.4-3.35v-76c0-1.08.9-1.96 1.98-1.96h37.9a4 4 0 0 0 4-4v-29.3c0-1.08.63-2.59 1.4-3.35l35.35-35"/><path stroke="#1AA5D0" d="M893.1 374.7L847.5 420a5.52 5.52 0 0 1-3.37 1.38H618.66c-1.09 0-2.6-.62-3.37-1.39l-81.65-81.08a5.52 5.52 0 0 0-3.37-1.39H384.49c-1.08 0-2.6.63-3.37 1.4l-17.14 17.02"/><path stroke="#55B549" d="M288.52 640.2h-46.9c-1.09 0-1.98.88-1.98 1.95v26.65c0 1.07-.89 1.95-1.97 1.95h-89.32"/><path stroke="#D3C452" d="M281.34 229.6l9.65 9.59c.77.76 2.29 1.39 3.37 1.39l146.76-.2c1.09 0 2.6.63 3.38 1.37l115.95 114c.77.76.77 1.99 0 2.75l-37.2 37.05a1.96 1.96 0 0 0 0 2.78l49.62 49.28c.77.77 2.3 1.4 3.38 1.4h138.28c1.08 0 2.6.62 3.37 1.39l37.26 37c.77.76 2.3 1.4 3.38 1.4h21.7"/><path stroke="#9DCA40" d="M-116.02 841.87h216.77c1.09 0 1.97-.89 1.97-1.96v-99.83c0-1.08.9-1.96 1.98-1.96h266.24c1.08 0 2.6-.62 3.37-1.39l20.18-20.04c.77-.76.77-2.02 0-2.76l-78.7-78.2a5.45 5.45 0 0 1-1.4-3.35v-1.57c0-1.07.88-1.96 1.97-1.96l139.22.02c1.09 0 2.6-.62 3.38-1.39l53.7-53.48a4.86 4.86 0 0 1 2.8-1.39c.76 0 1.41-.88 1.41-1.96v-6.62"/><path stroke="#B00D7C" d="M317.92 257.82l73.16 72.65c.77.77 1.4 2.27 1.4 3.35v45.25c0 1.08.63 2.59 1.4 3.35l12.02 11.93c.77.77 2.28 1.4 3.37 1.4h9.86c1.09 0 2.6-.63 3.38-1.4l6.29-6.25a5.52 5.52 0 0 1 3.37-1.39h85.81c1.08 0 2.6-.62 3.37-1.39l63.1-62.66a5.52 5.52 0 0 1 3.38-1.4h161.56c1.08 0 1.97.89 1.97 1.96v178.66c0 1.07-.63 2.58-1.4 3.35l-11.42 11.34a5.52 5.52 0 0 1-3.38 1.39H529.03a1.97 1.97 0 0 1-1.98-1.96v-73.07c0-1.07-.88-1.96-1.97-1.96h-88.26a1.97 1.97 0 0 1-1.97-1.95V406.5c0-1.08-.89-1.96-1.97-1.96-1.99 0-3.5-.63-4.28-1.4l-7.44-7.38"/><path stroke="#DA5A98" d="M650.42-78.35v211.36c0 1.08.63 2.59 1.4 3.35l46.73 46.4c.77.77 1.4 2.28 1.4 3.36v35.79l-2.49-.14c-.75 0-1.97.63-2.74 1.4l-18.32 18.19a5.45 5.45 0 0 0-1.4 3.35v116.95c0 1.07.63 2.58 1.38 3.35l46.53 46.58a5.42 5.42 0 0 1 1.38 3.35l-.02 30.34c0 1.08-.63 2.59-1.4 3.35l-4.91 4.88a5.52 5.52 0 0 1-3.37 1.4H599.52c-1.08 0-1.97.87-1.97 1.95v36c0 1.08-.89 1.96-1.97 1.96h-92.71c-1.09 0-2.6.63-3.38 1.4l-19.58 19.45a5.52 5.52 0 0 1-3.38 1.39h-63.61"/><path stroke="#1EB2D8" d="M281.48 745v84.33c0 1.08-.89 1.96-1.97 1.96h-57.48c-1.09 0-1.98.88-1.98 1.96v10.36c0 1.08-.88 1.96-1.97 1.96H110.52"/><path stroke="#F5C739" d="M10.95 362.32l113.4 112.62c.78.77 2.3 1.4 3.38 1.4h36.12c1.08 0 2.6.62 3.37 1.38l205.45 204.03c.77.76 2.29 1.39 3.37 1.39l62.74.03h29.53c1.09 0 2.6.63 3.37 1.4l16.36 16.23c.77.77 2.29 1.4 3.37 1.4h134.34"/><path stroke="#31B495" d="M275.82 590.44l24.44-24.27a5.52 5.52 0 0 1 3.37-1.4h121.52c1.08 0 2.6.63 3.37 1.4l34.32 34.08c.77.77 2.3 1.4 3.38 1.4h54.36"/><path stroke="#AD7D20" d="M633.41 278.74l-21.36-21.22a5.45 5.45 0 0 1-1.4-3.35V-78.58"/><path stroke="#1F8C43" d="M754.4 192.02v20.11c0 1.08-.9 1.96-1.98 1.96h-94.49c-1.08 0-2.6.63-3.37 1.4l-50.28 49.93a5.45 5.45 0 0 0-1.4 3.35v56.41c0 1.08.63 2.59 1.4 3.35l10.63 10.56c.77.76 1.4 2.27 1.4 3.35v121.45c0 1.08-.89 1.96-1.97 1.96H429.6c-1.08 0-2.6-.62-3.37-1.39l-21.2-21.06-15.77 14.8a5.52 5.52 0 0 1-3.37 1.38H282.15c-1.08 0-2.6.63-3.37 1.37l-62.1 61.3a5.5 5.5 0 0 1-3.37 1.37h-69.85c-1.09 0-2.6.63-3.37 1.4l-68.22 67.73a5.52 5.52 0 0 1-3.37 1.4H34.1c-1.09 0-2.6.62-3.38 1.38l-61.64 61.22a5.45 5.45 0 0 0-1.4 3.35v98.02c0 1.08-.89 1.96-1.97 1.96h-30.76c-1.08 0-2.6.63-3.37 1.4l-48.29 47.95"/><path stroke="#74BB63" d="M184.55 422.03v34.09c0 1.07-.63 2.58-1.4 3.35l-56.48 55.88a5.52 5.52 0 0 1-3.37 1.4H-34.6"/><path stroke="#E5683E" d="M980.12 416.59l-15.05-14.95a5.52 5.52 0 0 0-3.38-1.4h-46.04c-1.08 0-2.6.63-3.37 1.4l-14.5 14.4c-.77.76-1.4.5-1.4-.57v-34.93c0-1.08-.63-2.58-1.4-3.35l-2.48-2.47"/><path stroke="#DA5A98" d="M826.77 238.25v54.43c0 1.08.63 2.59 1.4 3.35l86.38 85.78c.77.77 2.29 1.4 3.37 1.4h98.61c1.09 0 2.6-.63 3.36-1.4l22.6-22.8a5.47 5.47 0 0 1 3.36-1.39h106.38c1.08 0 1.97-.88 1.97-1.96l.04-95.24c0-1.08.89-1.96 1.97-1.96h39.02c1.09 0 1.97.88 1.97 1.96v48.1"/><path stroke="#E6632A" d="M12.87 361.05h-5c-1.1 0-2.61-.63-3.38-1.4l-17.72-17.58a5.52 5.52 0 0 0-3.37-1.4h-16.9c-1.09 0-2.6-.62-3.38-1.38l-55.64-55.26a5.52 5.52 0 0 0-3.38-1.4h-15.19"/><path stroke="#3EB373" d="M959.23 126.08l19.2 19.06c.76.76 2.28 1.39 3.36 1.39h177.42c1.09 0 1.97.88 1.97 1.96v100.84a3 3 0 0 0 3 3h36.42c1.08 0 1.97.88 1.97 1.96v54.65"/><path stroke="#2765B0" d="M33.17 798.75h242.12c1.08 0 1.97-.88 1.97-1.96V672.9c0-1.08-.89-1.96-1.97-1.96h-30.12a1.97 1.97 0 0 1-1.98-1.96v-26.76c0-1.07-.88-1.96-1.97-1.96h-20.87"/><path stroke="#EB9D12" d="M458.48 496.1h9.55c1.09 0 2.6-.63 3.37-1.4l48.23-47.83a5.52 5.52 0 0 1 3.38-1.39h24.26c1.08 0 2.6.63 3.37 1.39l23.26 23.1c.77.76 2.29 1.39 3.37 1.39h111.06c1.09 0 1.97-.88 1.97-1.96v-54.46c0-1.08-.63-2.59-1.4-3.33l-20.35-20.04-2.8-2.76-1.17-1.16a5.52 5.52 0 0 0-3.37-1.39h-11.66a1.97 1.97 0 0 1-1.97-1.96V310.6c0-1.08.88-1.96 1.97-1.96h77.38"/><path stroke="#9DCA40" d="M-34.94 402.19v111.19c0 1.07.63 2.58 1.4 3.35l49.06 48.71c.76.77 2.28 1.4 3.37 1.4h21.8c1.08 0 2.6.62 3.37 1.39l113 112.22c.78.77 2.3 1.4 3.38 1.4h170.6c1.08 0 1.97.87 1.97 1.95v60.41"/></g></svg>
-			</div>
-		</div>
-	</div>
-	<div class="content">
-		<div class="container-fluid">
-			<div class="jumbotron" id="top">
-			</div>
-		</div>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Artiom Tsimkin, Computer Engineering, University of Waterloo, Canada."
+    />
+    <meta
+      name="keywords"
+      content="Artiom, Tsimkin, Artiom Tsimkin, Waterloo, UWaterloo, ECE, Computer Engineering, Engineering"
+    />
+    <meta name="robots" content="index,follow" />
+  </head>
 
-		<div class="container" id="afterTitle">
+  <!-------------------------------------------------- Body -------------------------------------------------->
 
-		  <!-------------------------------------------------- Nav tabs -------------------------------------------------->
-		  <ul class="nav nav-tabs" id="NavigationBar" role="tablist">
-			<li class="nav-item">
-				<a class="nav-link active" id="page" data-toggle="tab" href="#home" title="Home tab">Welcome</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="page" data-toggle="tab" href="#Resume" title="My resume">Resume</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="page" data-toggle="tab" href="#Projects" title="Different things I worked on">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="page" data-toggle="tab" href="#Contact" title="My contact information">Contact</a>
-			</li>
-		  </ul>
+  <body
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="50"
+    onload="waitLoad()"
+    id="wrapper"
+  >
+    <div
+      style="
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -o-user-select: none;
+      "
+      unselectable="on"
+      onselectstart="return false;"
+      onmousedown="return false;"
+    >
+      <div class="container">
+        <div class="background">
+          <script src="./animation/strokes.js"></script>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="jumbotron" id="top"></div>
+        </div>
 
-		  
-		  <!-------------------------------------------------- Tab 1 -------------------------------------------------->
-			<div class="tab-content">
-				<div id="home" class="container tab-pane active fadeIn">
-				
-					<div id="aboutMe" class="container">
-					   <div class="row">
-						<div class="col-md-6 col-lg-8 col-xl-8">
-							<h2 id="GeneralTitle1">About me</h2> <br>
-							<p id="GeneralText1">Welcome to my website! I'm a Belarusian-born Israeli who now resides in Canada. My diverse background has allowed me to develop a unique perspective and skill set.</p>
-							<p id="GeneralText1">After earning a diploma in computer engineering from college, I was selected for a military program where I worked on an Air Force project while completing my studies. I then spent three years working in an R&D team, where I focused on planning, building, installing, and supporting digital hardware systems using VHDL coding.</p>
-							<p id="GeneralText1">In 2016, I moved to Canada and pursued a degree in Computer Engineering at the University of Waterloo. I graduated in 2022 and am now working in the back-end and full-stack fields. I enjoy working on embedded and software projects, making music, and staying active with sports. With fluency in three languages and a strong work ethic, I'm excited to continue growing my skills and making an impact in my industry.</p>
-						  
-						</div>
-						
-						<div class="col-md-6 col-lg-4 col-xl-4">
-								<img src="pics/MyPic.jpg" class="img-thumbnail center" id="myPic" alt="My pic failed to load">
-								<br> <br>
-						</div>
-						</div>
-					</div>
-					<br>
-					<div id="SkillsBox" class="container-fluid">
-						<h2 id="GeneralTitle1">My Skills</h2>
-						<br>
-						<p id="GeneralText1"> C# / Python / Kotlin / SQL / Cypher / Spring / Kotest </p>
-						<div class="skillBar">
-							<div class="skills skill1" id="GeneralText1"></div>
-						</div>
-						<br>
-						<p id="GeneralText1"> Java / TypeScript / JS / HTML / CSS / REST API / GraphQL </p>
-						<div class="skillBar">
-							<div class="skills skill2" id="GeneralText1"></div>
-						</div>
-						<br>
-						<p id="GeneralText1"> C / C++ / .NET / Git / Kafka / Embedded Systems </p>
-						<div class="skillBar">
-							<div class="skills skill3" id="GeneralText1"></div>
-						</div>
-						<br>
-						<p id="GeneralText1"> Linux / Docker / Android / Selenium / Digital Hardware </p>
-						<div class="skillBar">
-							<div class="skills skill4" id="GeneralText1"></div>
-						</div>
-						<br>
-						<p id="GeneralText1"> Rust / Angular / Bootstrap / ARM / MSP / FPGA / Verilog </p>
-						<div class="skillBar">
-							<div class="skills skill5" id="GeneralText1"></div>
-						</div>
-						<br>
-						<p id="GeneralText1"> AWS / Azure / Node.js / PowerShell / Bash </p>
-						<div class="skillBar">
-							<div class="skills skill6" id="GeneralText1"></div>
-						</div>
-					</div>
-					<br> <br>
-				</div>
-				
-				
-				<!-------------------------------------------------- Tab 2 -------------------------------------------------->
-				<div id="Resume" class="container tab-pane fadeIn">
-					<nav class="navbar justify-content-center navbar-expand-sm navbar-dark bg-secondary sticky-top">  
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#Resume_section1" id="ResumeLink">Skills</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#Resume_section2" id="ResumeLink">Experience</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#Resume_section3" id="ResumeLink">Education</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link" href="#Resume_section4" id="ResumeLink">Projects and more</a>
-							</li>
-						</ul>
-					</nav>
-						
-					<div id="Resume_section1">
-						
-						<br>
-						<div id="Resume_title">
-							<h1 id="Resume_h1"> Artiom Tsimkin </h1>
-						</div>
-						<br>
-						<hr class="hrLine">
-						<!---------------------------- Skills ---------------------------->
-						<h2 id="Resume_h2"> Skills </h2>
-						<div class="row">
-							<div class="col-lg-6 col-xl-6">
-								<div id="Resume_skills1">
-								<ul>	
-									<li> Experience with C, C#, Python, Kotlin, and Java through different projects. </li>
-									<li> Working knowledge of TypeScript, JavaScript, HTML, and CSS. </li>
-									<li> Used SQL and NoSQL in MySQL, SSMS, Oracle, MongoDB, and Neo4j databases. </li>
-									<li> Studied web development and worked on web projects. </li>
-									<li> Languages: English, Hebrew, and Russian. </li>
-								</ul>
-								</div>
-							</div>
-							<div class="col-lg-6 col-xl-6">	
-								<div id="Resume_skills2">
-								<ul>	
-									<li> 3 years of working with FPGAs, VHDL, and digital hardware for the military. </li>
-									<li> Experience with embedded systems, ARM, MSP, Verilog, digital design, and Assembly. </li>
-									<li> Worked with Linux, Git, Docker, Jira, AWS, Azure, .NET, Node.js, Angular, REST API, GraphQL, Spring, Kotest, Kafka, NATS.io, Grafana, Selenium, Swagger, Bootstrap, and more. </li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				
-					<div id="Resume_section2">
-						<!---------------------------- Experience ---------------------------->
-						<br>
-						<hr class="hrLine">
-						
-						<h2 id="Resume_h2"> Experience </h2>
-						
-						<h3 id="Resume_h3"> JULY 2022 – JANUARY 2023 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Software Engineering / </span> Qohash, Quebec City </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Worked on replacing the AWS Kinesis streaming technology with Apache Kafka, resulting in a 20% improvement in startup and operation times, maintainability, testing, and reduced annual costs. </li>
-							<li> Implemented a real-time record interceptor in Kotlin to efficiently manage multi-tenancy for the application, and added visual metrics and monitoring using Grafana, improving system performance. </li>
-							<li> Migrated multiple projects to Spring Boot 3, enriching functionality while maintaining backward compatibility. </li>
-							<li> Contributed to enhancing the coverage of unit, integration, and end-to-end testing with Kotest and Karate. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> SEPTEMBER 2021 – DECEMBER 2021 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Web Development / </span> Entripy Custom Clothing, Oakville </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Developed full-stack features of a web application using TypeScript, Angular, and RESTful services, including implementing responsive UI design and integrating third-party libraries to enhance functionality. </li>
-							<li> Improved testing coverage by writing C# unit tests and end-to-end tests with SpecFlow and Selenium, resulting in a 10% reduction in bugs reported in production. </li>
-							<li> Supported the CI/CD pipeline and maintained Azure Service Bus functions. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> NOVEMBER 2020 – DECEMBER 2020 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Application Development / </span> QBuild Software, Markham </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Delivered front-end features using Kendo UI for jQuery and tackled the technical debt of a corporate legacy application, significantly boosting overall performance and user experience. </li>
-							<li> Resolved critical bugs and implemented new features by developing back-end functionality using C# and SQL. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> SEPTEMBER 2020 – OCTOBER 2020 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Web Development / </span> 416 Automation, Mississauga </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Designed and implemented Windows Services to remotely monitor disk space usage on a production line, proactively alerting on-site engineers to ensure continuous operation of critical equipment. </li>
-							<li> Utilized ASP.NET Core Razor Pages to maintain a test result web application, including building helpful menus, demonstrating expertise in web development and user experience design. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> JANUARY 2020 – APRIL 2020 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Software Development / </span> Clearpath, Kitchener </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Designed and developed a robust testing manager using Python and ROS for self-driving robots, resulting in significant time and cost savings by reducing production testing and field maintenance efforts by hours. </li>
-							<li> Implemented a plugin manager to ease the process of adding new tests, improving scalability and maintenance. </li>
-							<li> Developed a custom UI to facilitate remote testing and real-time status updates for maintenance personnel, enabling streamlined and efficient management of testing processes. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> MAY 2019 – AUGUST 2019 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Embedded Software Engineering / </span> Redline Communications, Markham </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Upgraded the S-parameter test set of a network analyzer to use an ARM Cortex-M4 processor, allowing customization in functionality and high-performance precision at a low cost. </li>
-							<li> Added USB interfacing to the ARM board and built a CLI in C to operate the RF components, set converter thresholds, configure SPIs, and write to flash memory, enabling test engineers to run complex tests with ease. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> SEPTEMBER 2018 – DECEMBER 2018 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> System Support / </span> Ministry of the Attorney General, Toronto </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Developed a security application in C# to assist with transferring information securely company-wide using a custom encryption algorithm. </li>
-							<li> Developed PowerShell scripts to automate procedures and backups, speeding up workflows by up to 200%. </li>
-							<li> Used Batch to develop an automatic backup tool to reduce the need for manual backups. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> JANUARY 2018 – APRIL 2018 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Software Quality Assurance / </span> Ministry of Education, Toronto </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Managed and executed test scripts using SQL in an Oracle database to ensure smooth daily deployment. </li>
-							<li> Used ALM, UFT, PL/SQL, Toad, IBM Cognos, and virtual machines to test applications on the front-end, back-end, and database sides. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> JULY 2013 – JUNE 2016 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Research and Development: Aircraft Communication / </span> Israeli Air Force, Israel </h4>
-						<div id="Resume_experience">
-						<ul>	
-							<li> Developed VHDL code in ISE for Xilinx Virtex FPGAs and verified functionality using test benches, demonstrating expertise in digital design and simulation. </li>
-							<li> Collaborated with senior engineers to design circuits in OrCAD, constructed wire-wrap prototypes, and tested them on mockup systems, ensuring reliable operation in high-stakes military environments. </li>
-							<li> Contributed to hardware and software projects in a diverse team, communicating effectively with experts in various domains, to enable secure and seamless communication between air, land, and satellite assets. </li>
-							<li> Proficiently utilized electronic tools such as multimeters, oscilloscopes, signal generators, and logic analyzers to test and repair circuits, demonstrating hands-on experience with electronics testing and troubleshooting. </li>
-						</ul>
-						</div>
-					</div>
-					
-					<div id="Resume_section3">
-						<!---------------------------- Education ---------------------------->
-						<br>
-						<hr class="hrLine">
-						
-						<h2 id="Resume_h2"> Education </h2>
-						<h3 id="Resume_h3"> SEPTEMBER 2017 – APRIL 2022 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> Bachelor of Applied Science / </span> Computer Engineering, University of Waterloo </h4>
-						<div id="Resume_education">
-						<ul>
-							<li> $2000 President’s Scholarship of Distinction. </li>
-							<li> Excellent academic standing with a full course load while being ranked in the top quarter. </li>
-						</ul>
-						</div>
-						<br>
-						
-						<h3 id="Resume_h3"> SEPTEMBER 2011 – JUNE 2013 </h3>
-						<h4 id="Resume_h4"> <span id="ResumeBlue"> College diploma / </span> Computer Engineering, Kinneret College, Israel </h4>
-						<div id="Resume_education">
-						<ul>	
-							<li> Graduated with an overall A+ average while working on a project for the military: a communication board with voltage and data converters, RAM, LCD and controlled by Spartan 6 FPGA for the Sikorsky UH-60 Black Hawk military helicopter. </li>
-							<li> Was chosen to assist a team with building a robot for the FIRST Robotics Competition. </li>
-						</ul>
-						</div>
-					</div>
-					
-					<div id="Resume_section4">
-					  <!---------------------------- Projects and more ---------------------------->
-						<br>
-						<hr class="hrLine">
-						
-						<h2 id="Resume_h2"> Projects and more </h2>
-						<div id="Resume_activities">
-						<ul>
-							<li> Developed an android app with friends which matches people to eat together over a video call based on interests. </li>
-							<li> Built a library management application in Python that uses large Kaggle datasets. </li>
-							<li> Created a Windows service that monitors disc space usage of machines and sends email notifications. </li>
-							<li> Designed an embedded system that manages a greenhouse over a CLI. </li>
-							<li> Worked on an Android Truth Or Dare game with friends. </li>
-							<li> Developed a simple 5-stage pipeline RISC-V processor in Verilog. </li>
-							<li> Built a JavaScript tool to remind employees to record their temperature during COVID. </li>							
-							<li> Assembled a smart mirror powered by a Raspberry Pi to display widgets. </li>
-							<li> Wrote an encryption app with a custom algorithm in C#. </li>
-							<li> Created a mobile game in which the player earns points by swinging their device. </li>
-							<li> Installed a GPS module, a touch screen, reverse sensors, and fancy lights on my car. </li>
-							<li> Built a clock with a touch display using a Discovery board by ST. </li>
-							<li> Developed a car toy that follows the user during a hackathon. </li>
-							<li> Created a PowerShell script to manage server restarts and shutdowns. </li>
-							<li> Developed a device that flips pages as the user reads for a hackathon. </li>
-							<li> Built a tool in Batch which manages file backups in the background. </li>
-							<li> Made a toy that shows the temperature when the user claps. </li>
-							<li> Constructed this responsive website for myself. </li>
-							<li> Built a game similar to SkyRoads in JavaScript. </li>
-							<li> Worked on a wireless robot during a university competition. </li>
-							<li> Built a Simon Says game for a programming course. </li>
-							<li> Built a small board to control lights inside drawers and shelves. </li>
-							<li> Grade 12 project: a robot with an arm that avoids obstacles and picks things up. </li>
-							<li> Grade 11 project: light-sensitive car counter for a parking lot. </li>
-							<li> 2 years of volunteering in First Aid + CPR course. </li>
-							<li> 1 year of tutor volunteering in college which led to a job offer. </li>					
-						</ul>
-						</div>
-					</div>
-					<br>
-				</div>
-				
-				<!-------------------------------------------------- Tab 3 -------------------------------------------------->
-				<div id="Projects" class="container tab-pane fadeIn"><br>
-					<div class="progress-container">
-						<div class="progress-bar" id="myBar"></div>
-					</div>
-					
-					<div id="demo" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="container" id="afterTitle">
+          <!-------------------------------------------------- Nav tabs -------------------------------------------------->
+          <ul class="nav nav-tabs" id="NavigationBar" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="page"
+                data-toggle="tab"
+                href="#home"
+                title="Home tab"
+                >Welcome</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="page"
+                data-toggle="tab"
+                href="#Resume"
+                title="My resume"
+                >Resume</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="page"
+                data-toggle="tab"
+                href="#Projects"
+                title="Different things I worked on"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="page"
+                data-toggle="tab"
+                href="#Contact"
+                title="My contact information"
+                >Contact</a
+              >
+            </li>
+          </ul>
 
-						<!-- Indicators -->
-						<ul class="carousel-indicators">
-							<li data-target="#demo" data-slide-to="0" class="active"></li>
-							<li data-target="#demo" data-slide-to="1"></li>
-							<li data-target="#demo" data-slide-to="2"></li>
-							<li data-target="#demo" data-slide-to="3"></li>
-							<li data-target="#demo" data-slide-to="4"></li>
-							<li data-target="#demo" data-slide-to="5"></li>
-							<li data-target="#demo" data-slide-to="6"></li>
-							<li data-target="#demo" data-slide-to="7"></li>
-							<li data-target="#demo" data-slide-to="8"></li>
-							<li data-target="#demo" data-slide-to="9"></li>
-							<li data-target="#demo" data-slide-to="10"></li>
-							<li data-target="#demo" data-slide-to="11"></li>
-							<li data-target="#demo" data-slide-to="12"></li>
-							<li data-target="#demo" data-slide-to="13"></li>
-						</ul>
+          <!-------------------------------------------------- Tab 1 -------------------------------------------------->
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active fadeIn">
+              <div id="aboutMe" class="container">
+                <div class="row">
+                  <div class="col-md-6 col-lg-8 col-xl-8">
+                    <h2 id="GeneralTitle1">About me</h2>
+                    <br />
+                    <p id="GeneralText1">
+                      Welcome to my website! I'm a Belarusian-born Israeli who
+                      now resides in Canada. My diverse background has allowed
+                      me to develop a unique perspective and skill set.
+                    </p>
+                    <p id="GeneralText1">
+                      After earning a diploma in computer engineering from
+                      college, I was selected for a military program where I
+                      worked on an Air Force project while completing my
+                      studies. I then spent three years working in an R&D team,
+                      where I focused on planning, building, installing, and
+                      supporting digital hardware systems using VHDL coding.
+                    </p>
+                    <p id="GeneralText1">
+                      In 2016, I moved to Canada and pursued a degree in
+                      Computer Engineering at the University of Waterloo. I
+                      graduated in 2022 and am now working in the back-end and
+                      full-stack fields. I enjoy working on embedded and
+                      software projects, making music, and staying active with
+                      sports. With fluency in three languages and a strong work
+                      ethic, I'm excited to continue growing my skills and
+                      making an impact in my industry.
+                    </p>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-4">
+                    <img
+                      src="pics/MyPic.jpg"
+                      class="img-thumbnail center"
+                      id="myPic"
+                      alt="My pic failed to load"
+                    />
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div id="SkillsBox" class="container-fluid">
+                <h2 id="GeneralTitle1">My Skills</h2>
+                <br />
+                <p id="GeneralText1">
+                  C# / Python / Kotlin / SQL / Cypher / Spring / Kotest
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill1" id="GeneralText1"></div>
+                </div>
+                <br />
+                <p id="GeneralText1">
+                  Java / TypeScript / JS / HTML / CSS / REST API / GraphQL
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill2" id="GeneralText1"></div>
+                </div>
+                <br />
+                <p id="GeneralText1">
+                  C / C++ / .NET / Git / Kafka / Embedded Systems
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill3" id="GeneralText1"></div>
+                </div>
+                <br />
+                <p id="GeneralText1">
+                  Linux / Docker / Android / Selenium / Digital Hardware
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill4" id="GeneralText1"></div>
+                </div>
+                <br />
+                <p id="GeneralText1">
+                  Rust / React / Angular / Bootstrap / ARM / MSP / FPGA
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill5" id="GeneralText1"></div>
+                </div>
+                <br />
+                <p id="GeneralText1">
+                  AWS / Azure / Node.js / PowerShell / Bash / Verilog
+                </p>
+                <div class="skillBar">
+                  <div class="skills skill6" id="GeneralText1"></div>
+                </div>
+              </div>
+              <br />
+              <br />
+            </div>
 
-						<!-- The slideshow -->
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img src="pics/projects/projectPic1.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic2.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic3.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic4.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic5.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic6.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic7.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic8.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic9.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic10.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic11.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic12.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic13.jpg" alt="Project Pic">
-							</div>
-							<div class="carousel-item">
-								<img src="pics/projects/projectPic14.jpg" alt="Project Pic">
-							</div>
-						</div>
+            <!-------------------------------------------------- Tab 2 -------------------------------------------------->
+            <div id="Resume" class="container tab-pane fadeIn">
+              <nav
+                class="navbar justify-content-center navbar-expand-sm navbar-dark bg-secondary sticky-top"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Resume_section1" id="ResumeLink"
+                      >Skills</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Resume_section2" id="ResumeLink"
+                      >Experience</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Resume_section3" id="ResumeLink"
+                      >Education</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#Resume_section4" id="ResumeLink"
+                      >Projects and more</a
+                    >
+                  </li>
+                </ul>
+              </nav>
 
-						<!-- Left and right controls -->
-						<a class="carousel-control-prev" href="#demo" data-slide="prev">
-							<span class="carousel-control-prev-icon"></span>
-						</a>
-						<a class="carousel-control-next" href="#demo" data-slide="next">
-							<span class="carousel-control-next-icon"></span>
-						</a>
-					</div>
-					<br> <br>
-					
-					<!-- the projects -->
-					<h2 id="GeneralTitle3">Software</h2>
-					<br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Crypto <span id="ProjectTool">(C#)</span></h3>
-							<p id="GeneralText3">Crypto can encrypt and decrypt text in order to securely transfer information. It has a login password, instructions, it can export to a text file and supports 3 encryption methods.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_crypto.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Truth Or Dare <span id="ProjectTool">(Java)</span></h3>
-							<p id="GeneralText3">The classic party game, which my friends and I built for the phone and uploaded to Google Play. It supports up to 15 players per game, offers audio, manages a scoreboard, and allows customization of hundreds of truths and dares.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_truthDare.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Library Management <span id="ProjectTool">(Python, SQL)</span></h3>
-							<p id="GeneralText3">A library tool which manages databases of books, checkouts, authors, publishers, users, addresses, late returns, and more.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_library.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Temperature Reminder <span id="ProjectTool">(JS)</span></h3>
-							<p id="GeneralText3">A small friendly reminder for employees to record their temperature during COVID. The email had a link to the right place in Google Sheets, a reminder counter, and an automatic end-of-day report was sent to management.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_temperature.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">TouchClock <span id="ProjectTool">(C)</span></h3>
-							<p id="GeneralText3">A clock with a touch display using a Discovery board by ST and their GUI software.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_clock.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">AutoDoc <span id="ProjectTool">(Batch)</span></h3>
-							<p id="GeneralText3">AutoDoc is a backup tool that runs in the background. The user can set when and how often the desired folders will be backed up into the specified locations. It knows how to handle missing folders, incorrect paths, duplicates and it outputs a log.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_autodoc.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Restart Manager <span id="ProjectTool">(PowerShell)</span></h3>
-							<p id="GeneralText3">This script monitors the status of listed machines on the network. It can print if a server is on or off, records time of changes and can restart or turn off servers. </p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_powershell.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">BlockRide <div id="ProjectTool">(HTML, CSS, JS)</div></h3>
-							<p id="GeneralText3">BlockRide is a game similar to SkyRoads where the player has to pass 10 levels by dodging flying objects. </p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_game.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Calculator <span id="ProjectTool">(C#)</span></h3>
-							<p id="GeneralText3">One of my first C# projects. This is a typical calculator app with a cool icon that runs on Windows.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_calculator.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">This Website <div id="ProjectTool">(HTML, CSS, JS, BS4)</div></h3>
-							<p id="GeneralText3">I built this website, upgrading my previous website, after learning JavaScript and Bootstrap 4. It is responsive, includes Google Fonts, a map and animations.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_website.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<h2 id="GeneralTitle3">Embedded</h2>
-					<br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Magic Mirror<div id="ProjectTool">(Python, JSON + Hardware)</div></h3>
-							<p id="GeneralText3">Assembled my own smart mirror using a two-way glass over a monitor powered by a Raspberry Pi to display widgets like time, weather, news and motivating quotes.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_mirror.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Automated Test Station<div id="ProjectTool">(ARM Cortex-M + Hardware)</div></h3>
-							<p id="GeneralText3">During my work term at Redline Communications, I developed an automated test environment with an interface that can measure various RF parameters of boards and components.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_redline.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Prototype for a military communication board<div id="ProjectTool">(VHDL + Hardware)</div></h3>
-							<p id="GeneralText3">During my second year in college I was working in a military base on a board that was later mass-produced and installed on military air craft. It includes an FPGA running on a VHDL code, voltage and data converters, a RAM and an LCD.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_projectant.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">TeslaToy<div id="ProjectTool">(Arduino + Hardware)</div></h3>
-							<p id="GeneralText3">During a hackathon event, 2 guys and I rebuild a toy into a car that follows the user. GPS and accelerometer data were sent from the phone in the user's pocket to the Arduino on the car which was controlling it.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_teslatoy.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Tempocute <div id="ProjectTool">(Arduino + Hardware)</div></h3>
-							<p id="GeneralText3">This cute guy shows the temperate in Celsius and Fahrenheit when you clap twice. He runs on A4 batteries and changes display color as a function of the light in the room.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_tempocute.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Greenhouse Monitoring System <div id="ProjectTool">(MSP430 + Hardware)</div></h3>
-							<p id="GeneralText3">As a part of a course, my friend and I built an agriculture system to monitor temperature and soil moisture in different zones of a greenhouse by adjusting ventilation and aggregation motors. In addition, data was displayed on an LCD and the system could be controlled via a CLI. After the prototype was final, we designed and ordered a PCB.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_ece298.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Flipper <div id="ProjectTool">(Arduino + Hardware)</div></h3>
-							<p id="GeneralText3">In another hackathon, a friend and I built a device that was flipping pages as the user was reading and was controlled by the user's voice or by an Android app. The user would say "Forward" or "Backward" and the device would flip.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_flipper.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Simon Says <div id="ProjectTool">(Omega2 + Hardware)</div></h3>
-							<p id="GeneralText3">As a part of a programming course, 2 friends and I built a Simon Says game. It had lights, sounds, 10 levels, and calculated various stats about different groups of people who played the game.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_simon.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Lightus <span id="ProjectTool">(Hardware)</span></h3>
-							<p id="GeneralText3">This small board was turning on lights in dark drawers and shelves in my apartment during college. It was connected to series of leds and buttons such that if a drawer or shelf were open when its dark, the lights would turn on.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_lightus.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Car Stuff <span id="ProjectTool">(Hardware)</span></h3>
-							<p id="GeneralText3">My dad and I installed reverse and tire pressure sensors, fancy lights, a reverse cam, a GPS module and a touch screen in my car. So far it works good and looks cool.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_car.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<h2 id="GeneralTitle3">Non Technical Projects</h2>
-					<br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Music <span id="ProjectTool">(Fruity Loops)</span></h3>
-							<p id="GeneralText3">I played guitar and enjoyed making music during highschool and college. I made covers, recorded songs with friends and one of my songs was on the radio.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_fruityloops.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Adobe Creative Suite </h3>
-							<p id="GeneralText3">I learned Adobe Photoshop, After Effects and Flash in my free time, created animations and edited photos and videos.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_photoshop.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-					
-					<div class="row">
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<h3 id="GeneralTitleSmall3">Drawing </h3>
-							<p id="GeneralText3">I was drawing comics and anime during highschool.</p>
-							<br>
-						</div>
-						
-						<div class="col-md-6 col-lg-6 col-xl-6">
-							<img src="pics/projects/p_drawing.jpg" class="img-thumbnail right" id="ProjectPic" alt="Project pic failed to load">
-						</div>
-					</div>
-					<br> <br>
-				</div>
-				
-				<!-------------------------------------------------- Tab 4 -------------------------------------------------->
-				<div id="Contact" class="container tab-pane fadeIn"><br>
-					<div class="row">
-					<div class="col-md-6 col-lg-6 col-xl-6">
-						<h2 id="GeneralTitle4"> University </h2>
-						<br>
-						<p id="GeneralText4">Email: <a href="mailto:atsimkin@uwaterloo.ca" title="My University email" id="email" target="_blank">atsimkin@uwaterloo.ca</a> &nbsp; <button onclick="copytext('#email')" title="Copy my email">Copy</button> </p>
-						<br>
-						<p id="GeneralText4">University: <a href="https://uwaterloo.ca/" target="_blank" title="My University"> University of Waterloo </a> </p>
-						<br> <br>
-						<div id='map'></div>
-						<br> <br> <br>
-					</div>
-					
-					<div class="col-md-6 col-lg-6 col-xl-6">
-						<h2 id="GeneralTitle4"> Personal </h2>
-						<br>
-						<p id="GeneralText4">Github: <a href="https://github.com/artiomtz" target="_blank" title="My Github"> artiomtz </a> </p>
-						<br>
-						<p id="GeneralText4">Address: <a href="https://www.google.co.il/maps/place/Aurora,+ON" target="_blank" title="My address"> Aurora, Ontario, Canada </a> </p>
-						<br>
-						<br>
-						<div>
-						<ul id="contacts">
-							<li> <a href="https://www.linkedin.com/in/artiom-tsimkin-b81600140/" class="fa fa-linkedin" title="My LinkedIn" target="_blank"></a> </li>
-							<li> <a href="mailto:artiomtz@gmail.com" class="fa fa-google" title="My Gmail" target="_blank"></a> </li>
-							<li> <a href="https://www.facebook.com/artiomtz" class="fa fa-facebook" title="My Facebook" target="_blank"></a> </li> &nbsp; &nbsp;
-						</ul>
-						</div>
-						<img src="pics/signature.png" id="signature" alt="My signature failed to load">						
-						<br>
-					</div>
-					</div>
-				  <br> <br>
-				</div>
-				<br> <br> <br> <br> <br>
-			</div>
-		</div>
-		<br>
-		<div class="container-fluid text-center">
-			<div class="jumbotron">
-				<p id="foot"> &copy; Artiom Tsimkin University of Waterloo &copy; </p> 
-			</div> 
-		</div>
-	</div>
-	
-	<p id="animationCopyRight"> Background animation belongs to Julian Garnier<p>
-</div>		
-</body>
+              <div id="Resume_section1">
+                <br />
+                <div id="Resume_title">
+                  <h1 id="Resume_h1">Artiom Tsimkin</h1>
+                </div>
+                <br />
+                <hr class="hrLine" />
+                <!---------------------------- Skills ---------------------------->
+                <h2 id="Resume_h2">Skills</h2>
+                <div class="row">
+                  <div class="col-lg-6 col-xl-6">
+                    <div id="Resume_skills1">
+                      <ul>
+                        <li>
+                          Experience with C, C#, Python, Kotlin, and Java
+                          through different projects.
+                        </li>
+                        <li>
+                          Working knowledge of TypeScript, JavaScript, HTML, and
+                          CSS.
+                        </li>
+                        <li>
+                          Used SQL and NoSQL in MySQL, SSMS, Oracle, MongoDB,
+                          and Neo4j databases.
+                        </li>
+                        <li>
+                          Studied web development and worked on web projects.
+                        </li>
+                        <li>Languages: English, Hebrew, and Russian.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-6">
+                    <div id="Resume_skills2">
+                      <ul>
+                        <li>
+                          3 years of working with FPGAs, VHDL, and digital
+                          hardware for the military.
+                        </li>
+                        <li>
+                          Experience with embedded systems, ARM, MSP, Verilog,
+                          digital design, and Assembly.
+                        </li>
+                        <li>
+                          Worked with Linux, Git, Docker, Jira, AWS, Azure,
+                          .NET, Node.js, Angular, REST API, GraphQL, Spring,
+                          Kotest, Kafka, NATS.io, Grafana, Selenium, Swagger,
+                          Bootstrap, and more.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="Resume_section2">
+                <!---------------------------- Experience ---------------------------->
+                <br />
+                <hr class="hrLine" />
+
+                <h2 id="Resume_h2">Experience</h2>
+
+                <h3 id="Resume_h3">JULY 2022 – JANUARY 2023</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Software Engineering / </span> Qohash,
+                  Quebec City
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Worked on replacing the AWS Kinesis streaming technology
+                      with Apache Kafka, resulting in a 20% improvement in
+                      startup and operation times, maintainability, testing, and
+                      reduced annual costs.
+                    </li>
+                    <li>
+                      Implemented a real-time record interceptor in Kotlin to
+                      efficiently manage multi-tenancy for the application, and
+                      added visual metrics and monitoring using Grafana,
+                      improving system performance.
+                    </li>
+                    <li>
+                      Migrated multiple projects to Spring Boot 3, enriching
+                      functionality while maintaining backward compatibility.
+                    </li>
+                    <li>
+                      Contributed to enhancing the coverage of unit,
+                      integration, and end-to-end testing with Kotest and
+                      Karate.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">SEPTEMBER 2021 – DECEMBER 2021</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Web Development / </span> Entripy
+                  Custom Clothing, Oakville
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Developed full-stack features of a web application using
+                      TypeScript, Angular, and RESTful services, including
+                      implementing responsive UI design and integrating
+                      third-party libraries to enhance functionality.
+                    </li>
+                    <li>
+                      Improved testing coverage by writing C# unit tests and
+                      end-to-end tests with SpecFlow and Selenium, resulting in
+                      a 10% reduction in bugs reported in production.
+                    </li>
+                    <li>
+                      Supported the CI/CD pipeline and maintained Azure Service
+                      Bus functions.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">NOVEMBER 2020 – DECEMBER 2020</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Application Development / </span>
+                  QBuild Software, Markham
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Delivered front-end features using Kendo UI for jQuery and
+                      tackled the technical debt of a corporate legacy
+                      application, significantly boosting overall performance
+                      and user experience.
+                    </li>
+                    <li>
+                      Resolved critical bugs and implemented new features by
+                      developing back-end functionality using C# and SQL.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">SEPTEMBER 2020 – OCTOBER 2020</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Web Development / </span> 416
+                  Automation, Mississauga
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Designed and implemented Windows Services to remotely
+                      monitor disk space usage on a production line, proactively
+                      alerting on-site engineers to ensure continuous operation
+                      of critical equipment.
+                    </li>
+                    <li>
+                      Utilized ASP.NET Core Razor Pages to maintain a test
+                      result web application, including building helpful menus,
+                      demonstrating expertise in web development and user
+                      experience design.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">JANUARY 2020 – APRIL 2020</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Software Development / </span>
+                  Clearpath, Kitchener
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Designed and developed a robust testing manager using
+                      Python and ROS for self-driving robots, resulting in
+                      significant time and cost savings by reducing production
+                      testing and field maintenance efforts by hours.
+                    </li>
+                    <li>
+                      Implemented a plugin manager to ease the process of adding
+                      new tests, improving scalability and maintenance.
+                    </li>
+                    <li>
+                      Developed a custom UI to facilitate remote testing and
+                      real-time status updates for maintenance personnel,
+                      enabling streamlined and efficient management of testing
+                      processes.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">MAY 2019 – AUGUST 2019</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Embedded Software Engineering / </span>
+                  Redline Communications, Markham
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Upgraded the S-parameter test set of a network analyzer to
+                      use an ARM Cortex-M4 processor, allowing customization in
+                      functionality and high-performance precision at a low
+                      cost.
+                    </li>
+                    <li>
+                      Added USB interfacing to the ARM board and built a CLI in
+                      C to operate the RF components, set converter thresholds,
+                      configure SPIs, and write to flash memory, enabling test
+                      engineers to run complex tests with ease.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">SEPTEMBER 2018 – DECEMBER 2018</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> System Support / </span> Ministry of
+                  the Attorney General, Toronto
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Developed a security application in C# to assist with
+                      transferring information securely company-wide using a
+                      custom encryption algorithm.
+                    </li>
+                    <li>
+                      Developed PowerShell scripts to automate procedures and
+                      backups, speeding up workflows by up to 200%.
+                    </li>
+                    <li>
+                      Used Batch to develop an automatic backup tool to reduce
+                      the need for manual backups.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">JANUARY 2018 – APRIL 2018</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Software Quality Assurance / </span>
+                  Ministry of Education, Toronto
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Managed and executed test scripts using SQL in an Oracle
+                      database to ensure smooth daily deployment.
+                    </li>
+                    <li>
+                      Used ALM, UFT, PL/SQL, Toad, IBM Cognos, and virtual
+                      machines to test applications on the front-end, back-end,
+                      and database sides.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">JULY 2013 – JUNE 2016</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue">
+                    Research and Development: Aircraft Communication /
+                  </span>
+                  Israeli Air Force, Israel
+                </h4>
+                <div id="Resume_experience">
+                  <ul>
+                    <li>
+                      Developed VHDL code in ISE for Xilinx Virtex FPGAs and
+                      verified functionality using test benches, demonstrating
+                      expertise in digital design and simulation.
+                    </li>
+                    <li>
+                      Collaborated with senior engineers to design circuits in
+                      OrCAD, constructed wire-wrap prototypes, and tested them
+                      on mockup systems, ensuring reliable operation in
+                      high-stakes military environments.
+                    </li>
+                    <li>
+                      Contributed to hardware and software projects in a diverse
+                      team, communicating effectively with experts in various
+                      domains, to enable secure and seamless communication
+                      between air, land, and satellite assets.
+                    </li>
+                    <li>
+                      Proficiently utilized electronic tools such as
+                      multimeters, oscilloscopes, signal generators, and logic
+                      analyzers to test and repair circuits, demonstrating
+                      hands-on experience with electronics testing and
+                      troubleshooting.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="Resume_section3">
+                <!---------------------------- Education ---------------------------->
+                <br />
+                <hr class="hrLine" />
+
+                <h2 id="Resume_h2">Education</h2>
+                <h3 id="Resume_h3">SEPTEMBER 2017 – APRIL 2022</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> Bachelor of Applied Science / </span>
+                  Computer Engineering, University of Waterloo
+                </h4>
+                <div id="Resume_education">
+                  <ul>
+                    <li>$2000 President’s Scholarship of Distinction.</li>
+                    <li>
+                      Excellent academic standing with a full course load while
+                      being ranked in the top quarter.
+                    </li>
+                  </ul>
+                </div>
+                <br />
+
+                <h3 id="Resume_h3">SEPTEMBER 2011 – JUNE 2013</h3>
+                <h4 id="Resume_h4">
+                  <span id="ResumeBlue"> College diploma / </span> Computer
+                  Engineering, Kinneret College, Israel
+                </h4>
+                <div id="Resume_education">
+                  <ul>
+                    <li>
+                      Graduated with an overall A+ average while working on a
+                      project for the military: a communication board with
+                      voltage and data converters, RAM, LCD and controlled by
+                      Spartan 6 FPGA for the Sikorsky UH-60 Black Hawk military
+                      helicopter.
+                    </li>
+                    <li>
+                      Was chosen to assist a team with building a robot for the
+                      FIRST Robotics Competition.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="Resume_section4">
+                <!---------------------------- Projects and more ---------------------------->
+                <br />
+                <hr class="hrLine" />
+
+                <h2 id="Resume_h2">Projects and more</h2>
+                <div id="Resume_activities">
+                  <ul>
+                    <li>
+                      Developed an android app with friends which matches people
+                      to eat together over a video call based on interests.
+                    </li>
+                    <li>
+                      Built a library management application in Python that uses
+                      large Kaggle datasets.
+                    </li>
+                    <li>
+                      Created a Windows service that monitors disc space usage
+                      of machines and sends email notifications.
+                    </li>
+                    <li>
+                      Designed an embedded system that manages a greenhouse over
+                      a CLI.
+                    </li>
+                    <li>
+                      Worked on an Android Truth Or Dare game with friends.
+                    </li>
+                    <li>
+                      Developed a simple 5-stage pipeline RISC-V processor in
+                      Verilog.
+                    </li>
+                    <li>
+                      Built a JavaScript tool to remind employees to record
+                      their temperature during COVID.
+                    </li>
+                    <li>
+                      Assembled a smart mirror powered by a Raspberry Pi to
+                      display widgets.
+                    </li>
+                    <li>
+                      Wrote an encryption app with a custom algorithm in C#.
+                    </li>
+                    <li>
+                      Created a mobile game in which the player earns points by
+                      swinging their device.
+                    </li>
+                    <li>
+                      Installed a GPS module, a touch screen, reverse sensors,
+                      and fancy lights on my car.
+                    </li>
+                    <li>
+                      Built a clock with a touch display using a Discovery board
+                      by ST.
+                    </li>
+                    <li>
+                      Developed a car toy that follows the user during a
+                      hackathon.
+                    </li>
+                    <li>
+                      Created a PowerShell script to manage server restarts and
+                      shutdowns.
+                    </li>
+                    <li>
+                      Developed a device that flips pages as the user reads for
+                      a hackathon.
+                    </li>
+                    <li>
+                      Built a tool in Batch which manages file backups in the
+                      background.
+                    </li>
+                    <li>
+                      Made a toy that shows the temperature when the user claps.
+                    </li>
+                    <li>Constructed this responsive website for myself.</li>
+                    <li>Built a game similar to SkyRoads in JavaScript.</li>
+                    <li>
+                      Worked on a wireless robot during a university
+                      competition.
+                    </li>
+                    <li>Built a Simon Says game for a programming course.</li>
+                    <li>
+                      Built a small board to control lights inside drawers and
+                      shelves.
+                    </li>
+                    <li>
+                      Grade 12 project: a robot with an arm that avoids
+                      obstacles and picks things up.
+                    </li>
+                    <li>
+                      Grade 11 project: light-sensitive car counter for a
+                      parking lot.
+                    </li>
+                    <li>2 years of volunteering in First Aid + CPR course.</li>
+                    <li>
+                      1 year of tutor volunteering in college which led to a job
+                      offer.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+            </div>
+
+            <!-------------------------------------------------- Tab 3 -------------------------------------------------->
+            <div id="Projects" class="container tab-pane fadeIn">
+              <br />
+              <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+              </div>
+
+              <div
+                id="demo"
+                class="carousel slide"
+                data-ride="carousel"
+                data-interval="3000"
+              >
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+                  <li data-target="#demo" data-slide-to="4"></li>
+                  <li data-target="#demo" data-slide-to="5"></li>
+                  <li data-target="#demo" data-slide-to="6"></li>
+                  <li data-target="#demo" data-slide-to="7"></li>
+                  <li data-target="#demo" data-slide-to="8"></li>
+                  <li data-target="#demo" data-slide-to="9"></li>
+                  <li data-target="#demo" data-slide-to="10"></li>
+                  <li data-target="#demo" data-slide-to="11"></li>
+                  <li data-target="#demo" data-slide-to="12"></li>
+                  <li data-target="#demo" data-slide-to="13"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="pics/projects/projectPic1.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic2.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic3.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic4.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic5.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic6.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic7.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic8.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic9.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic10.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic11.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic12.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic13.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="pics/projects/projectPic14.jpg"
+                      alt="Project Pic"
+                    />
+                  </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+              <br />
+              <br />
+
+              <!-- the projects -->
+              <h2 id="GeneralTitle3">Software</h2>
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Crypto <span id="ProjectTool">(C#)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    Crypto can encrypt and decrypt text in order to securely
+                    transfer information. It has a login password, instructions,
+                    it can export to a text file and supports 3 encryption
+                    methods.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_crypto.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Truth Or Dare <span id="ProjectTool">(Java)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    The classic party game, which my friends and I built for the
+                    phone and uploaded to Google Play. It supports up to 15
+                    players per game, offers audio, manages a scoreboard, and
+                    allows customization of hundreds of truths and dares.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_truthDare.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Library Management
+                    <span id="ProjectTool">(Python, SQL)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    A library tool which manages databases of books, checkouts,
+                    authors, publishers, users, addresses, late returns, and
+                    more.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_library.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Temperature Reminder <span id="ProjectTool">(JS)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    A small friendly reminder for employees to record their
+                    temperature during COVID. The email had a link to the right
+                    place in Google Sheets, a reminder counter, and an automatic
+                    end-of-day report was sent to management.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_temperature.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    TouchClock <span id="ProjectTool">(C)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    A clock with a touch display using a Discovery board by ST
+                    and their GUI software.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_clock.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    AutoDoc <span id="ProjectTool">(Batch)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    AutoDoc is a backup tool that runs in the background. The
+                    user can set when and how often the desired folders will be
+                    backed up into the specified locations. It knows how to
+                    handle missing folders, incorrect paths, duplicates and it
+                    outputs a log.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_autodoc.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Restart Manager <span id="ProjectTool">(PowerShell)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    This script monitors the status of listed machines on the
+                    network. It can print if a server is on or off, records time
+                    of changes and can restart or turn off servers.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_powershell.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    BlockRide
+                    <div id="ProjectTool">(HTML, CSS, JS)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    BlockRide is a game similar to SkyRoads where the player has
+                    to pass 10 levels by dodging flying objects.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_game.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Calculator <span id="ProjectTool">(C#)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    One of my first C# projects. This is a typical calculator
+                    app with a cool icon that runs on Windows.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_calculator.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    This Website
+                    <div id="ProjectTool">(HTML, CSS, JS, BS4)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    I built this website, upgrading my previous website, after
+                    learning JavaScript and Bootstrap 4. It is responsive,
+                    includes Google Fonts, a map and animations.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_website.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <h2 id="GeneralTitle3">Embedded</h2>
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Magic Mirror
+                    <div id="ProjectTool">(Python, JSON + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    Assembled my own smart mirror using a two-way glass over a
+                    monitor powered by a Raspberry Pi to display widgets like
+                    time, weather, news and motivating quotes.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_mirror.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Automated Test Station
+                    <div id="ProjectTool">(ARM Cortex-M + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    During my work term at Redline Communications, I developed
+                    an automated test environment with an interface that can
+                    measure various RF parameters of boards and components.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_redline.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Prototype for a military communication board
+                    <div id="ProjectTool">(VHDL + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    During my second year in college I was working in a military
+                    base on a board that was later mass-produced and installed
+                    on military air craft. It includes an FPGA running on a VHDL
+                    code, voltage and data converters, a RAM and an LCD.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_projectant.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    TeslaToy
+                    <div id="ProjectTool">(Arduino + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    During a hackathon event, 2 guys and I rebuild a toy into a
+                    car that follows the user. GPS and accelerometer data were
+                    sent from the phone in the user's pocket to the Arduino on
+                    the car which was controlling it.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_teslatoy.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Tempocute
+                    <div id="ProjectTool">(Arduino + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    This cute guy shows the temperate in Celsius and Fahrenheit
+                    when you clap twice. He runs on A4 batteries and changes
+                    display color as a function of the light in the room.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_tempocute.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Greenhouse Monitoring System
+                    <div id="ProjectTool">(MSP430 + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    As a part of a course, my friend and I built an agriculture
+                    system to monitor temperature and soil moisture in different
+                    zones of a greenhouse by adjusting ventilation and
+                    aggregation motors. In addition, data was displayed on an
+                    LCD and the system could be controlled via a CLI. After the
+                    prototype was final, we designed and ordered a PCB.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_ece298.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Flipper
+                    <div id="ProjectTool">(Arduino + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    In another hackathon, a friend and I built a device that was
+                    flipping pages as the user was reading and was controlled by
+                    the user's voice or by an Android app. The user would say
+                    "Forward" or "Backward" and the device would flip.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_flipper.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Simon Says
+                    <div id="ProjectTool">(Omega2 + Hardware)</div>
+                  </h3>
+                  <p id="GeneralText3">
+                    As a part of a programming course, 2 friends and I built a
+                    Simon Says game. It had lights, sounds, 10 levels, and
+                    calculated various stats about different groups of people
+                    who played the game.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_simon.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Lightus <span id="ProjectTool">(Hardware)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    This small board was turning on lights in dark drawers and
+                    shelves in my apartment during college. It was connected to
+                    series of leds and buttons such that if a drawer or shelf
+                    were open when its dark, the lights would turn on.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_lightus.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Car Stuff <span id="ProjectTool">(Hardware)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    My dad and I installed reverse and tire pressure sensors,
+                    fancy lights, a reverse cam, a GPS module and a touch screen
+                    in my car. So far it works good and looks cool.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_car.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <h2 id="GeneralTitle3">Non Technical Projects</h2>
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">
+                    Music <span id="ProjectTool">(Fruity Loops)</span>
+                  </h3>
+                  <p id="GeneralText3">
+                    I played guitar and enjoyed making music during highschool
+                    and college. I made covers, recorded songs with friends and
+                    one of my songs was on the radio.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_fruityloops.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">Adobe Creative Suite</h3>
+                  <p id="GeneralText3">
+                    I learned Adobe Photoshop, After Effects and Flash in my
+                    free time, created animations and edited photos and videos.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_photoshop.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h3 id="GeneralTitleSmall3">Drawing</h3>
+                  <p id="GeneralText3">
+                    I was drawing comics and anime during highschool.
+                  </p>
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="pics/projects/p_drawing.jpg"
+                    class="img-thumbnail right"
+                    id="ProjectPic"
+                    alt="Project pic failed to load"
+                  />
+                </div>
+              </div>
+              <br />
+              <br />
+            </div>
+
+            <!-------------------------------------------------- Tab 4 -------------------------------------------------->
+            <div id="Contact" class="container tab-pane fadeIn">
+              <br />
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h2 id="GeneralTitle4">University</h2>
+                  <br />
+                  <p id="GeneralText4">
+                    Email:
+                    <a
+                      href="mailto:atsimkin@uwaterloo.ca"
+                      title="My University email"
+                      id="email"
+                      target="_blank"
+                      >atsimkin@uwaterloo.ca</a
+                    >
+                    &nbsp;
+                    <button onclick="copytext('#email')" title="Copy my email">
+                      Copy
+                    </button>
+                  </p>
+                  <br />
+                  <p id="GeneralText4">
+                    University:
+                    <a
+                      href="https://uwaterloo.ca/"
+                      target="_blank"
+                      title="My University"
+                    >
+                      University of Waterloo
+                    </a>
+                  </p>
+                  <br />
+                  <br />
+                  <div id="map"></div>
+                  <br />
+                  <br />
+                  <br />
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h2 id="GeneralTitle4">Personal</h2>
+                  <br />
+                  <p id="GeneralText4">
+                    Github:
+                    <a
+                      href="https://github.com/artiomtz"
+                      target="_blank"
+                      title="My Github"
+                    >
+                      artiomtz
+                    </a>
+                  </p>
+                  <br />
+                  <p id="GeneralText4">
+                    Address:
+                    <a
+                      href="https://www.google.co.il/maps/place/Waterloo,+ON"
+                      target="_blank"
+                      title="My address"
+                    >
+                      Waterloo, Ontario, Canada
+                    </a>
+                  </p>
+                  <br />
+                  <br />
+                  <div>
+                    <ul id="contacts">
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/artiom-tsimkin"
+                          class="fa fa-linkedin"
+                          title="My LinkedIn"
+                          target="_blank"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:artiomtz@gmail.com"
+                          class="fa fa-google"
+                          title="My Gmail"
+                          target="_blank"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.facebook.com/artiomtz"
+                          class="fa fa-facebook"
+                          title="My Facebook"
+                          target="_blank"
+                        ></a>
+                      </li>
+                      &nbsp; &nbsp;
+                    </ul>
+                  </div>
+                  <img
+                    src="pics/signature.png"
+                    id="signature"
+                    alt="My signature failed to load"
+                  />
+                  <br />
+                </div>
+              </div>
+              <br />
+              <br />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+        <br />
+        <div class="container-fluid text-center">
+          <div class="jumbotron">
+            <p id="foot">&copy; Artiom Tsimkin University of Waterloo &copy;</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="animationCopyRight">
+        Background animation belongs to Julian Garnier
+      </p>
+      <p></p>
+    </div>
+  </body>
 </html>

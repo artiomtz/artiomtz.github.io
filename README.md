@@ -1,3 +1,3 @@
 # artiomtz.github.io
 
-My personal website.
+My personal website: [artiomtsimk.in](http://artiomtsimk.in/)

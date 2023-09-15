@@ -77,6 +77,11 @@ function waitLoad() {
     zoom: 13, // starting zoom
   });
   map.addControl(new mapboxgl.NavigationControl()); // Add zoom and rotation controls to the map.
+
+  // scroll to top on refresh
+  setTimeout(function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 100);
 }
 
 // type welcome

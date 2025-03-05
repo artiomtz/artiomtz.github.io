@@ -2,1791 +2,1767 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Artiom Tsimkin</title>
+    <head>
+        <title>Artiom Tsimkin</title>
 
-    <link
-      rel="icon"
-      type="image/gif/png/jpg"
-      href="pics/transparent_title.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Permanent+Marker|Rock+Salt|Do+Hyeon|Waiting+for+the+Sunrise|Crete+Round|M+PLUS+1p|Mali"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="fonts.css" />
+        <link rel="icon" type="image/gif/png/jpg" href="pics/transparent_title.png" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Permanent+Marker|Rock+Salt|Do+Hyeon|Waiting+for+the+Sunrise|Crete+Round|M+PLUS+1p|Mali"
+            rel="stylesheet" />
+        <link
+            href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="fonts.css" />
 
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
-    <script src="animation/anime.min.js"></script>
-    <script src="functions.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+        <script src="animation/anime.min.js"></script>
+        <script src="functions.js"></script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Artiom Tsimkin, Computer Engineering, University of Waterloo, Canada."
-    />
-    <meta
-      name="keywords"
-      content="Artiom, Tsimkin, Artiom Tsimkin, Waterloo, UWaterloo, ECE, Computer Engineering, Engineering"
-    />
-    <meta name="robots" content="index,follow" />
-  </head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Artiom Tsimkin, Computer Engineering, University of Waterloo, Canada." />
+        <meta
+            name="keywords"
+            content="Artiom, Tsimkin, Artiom Tsimkin, Waterloo, UWaterloo, ECE, Computer Engineering, Engineering" />
+        <meta name="robots" content="index,follow" />
+    </head>
 
-  <!-------------------------------------------------- Body -------------------------------------------------->
+    <!-------------------------------------------------- Body -------------------------------------------------->
 
-  <body
-    data-spy="scroll"
-    data-target=".navbar"
-    data-offset="50"
-    onload="waitLoad()"
-    id="wrapper"
-  >
-    <div
-      style="
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -o-user-select: none;
-      "
-      unselectable="on"
-      onselectstart="return false;"
-      onmousedown="return false;"
-    >
-      <div class="container p-0">
-        <div class="background">
-          <script src="./animation/strokes.js"></script>
-        </div>
-      </div>
-      <div class="content">
-        <div class="container-fluid">
-          <div class="jumbotron" id="top"></div>
-        </div>
-
-        <div class="container" id="afterTitle">
-          <!-------------------------------------------------- Nav tabs -------------------------------------------------->
-          <ul class="nav nav-tabs" id="NavigationBar" role="tablist">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                id="page"
-                data-toggle="tab"
-                href="#home"
-                title="Home tab"
-                >Welcome</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="page"
-                data-toggle="tab"
-                href="#Resume"
-                title="My resume"
-                >Resume</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="page"
-                data-toggle="tab"
-                href="#Projects"
-                title="Different things I worked on"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                id="page"
-                data-toggle="tab"
-                href="#Contact"
-                title="My contact information"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <!-------------------------------------------------- Tab 1 -------------------------------------------------->
-          <div class="tab-content">
-            <div id="home" class="container tab-pane active fadeIn">
-              <div id="aboutMe" class="container">
-                <div class="row">
-                  <div class="col-md-6 col-lg-8 col-xl-8">
-                    <h2 id="GeneralTitle1">About me</h2>
-                    <br />
-                    <p id="GeneralText1">
-                      Welcome to my website! I'm a Belarusian-born Israeli who
-                      now resides in Canada. My diverse background has allowed
-                      me to develop a unique perspective and skill set.
-                    </p>
-                    <p id="GeneralText1">
-                      After earning a diploma in computer engineering from
-                      college, I was selected for a military program where I
-                      worked on an Air Force project while completing my
-                      studies. I then spent three years working in an R&D team,
-                      where I focused on planning, building, installing, and
-                      supporting digital hardware systems using VHDL coding.
-                    </p>
-                    <p id="GeneralText1">
-                      In 2016, I moved to Canada and pursued a degree in
-                      Computer Engineering at the University of Waterloo. I
-                      graduated in 2022 and am now working in the back-end and
-                      full-stack fields. I enjoy working on embedded and
-                      software projects, making music, and staying active with
-                      sports. With fluency in three languages and a strong work
-                      ethic, I'm excited to continue growing my skills and
-                      making an impact in my industry.
-                    </p>
-                  </div>
-                  <div class="col-md-6 col-lg-4 col-xl-4">
-                    <img
-                      src="pics/MyPic.jpg"
-                      class="img-thumbnail center"
-                      id="myPic"
-                      alt="My pic failed to load"
-                    />
-                    <br />
-                    <br />
-                  </div>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" id="wrapper">
+        <div
+            style="
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -o-user-select: none;
+            "
+            unselectable="on"
+            onselectstart="return false;"
+            onmousedown="return false;">
+            <div class="container p-0">
+                <div class="background">
+                    <script src="./animation/strokes.js"></script>
                 </div>
-              </div>
-              <br />
-              <div id="SkillsBox" class="container-fluid">
-                <h2 id="GeneralTitle1">My Skills</h2>
-                <br />
-                <p id="GeneralText1">
-                  JavaScript / Python / Kotlin / SQL / React / Node.js
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill1" id="GeneralText1"></div>
-                </div>
-                <br />
-                <p id="GeneralText1">
-                  Java / TypeScript / HTML / CSS / Spring Boot
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill2" id="GeneralText1"></div>
-                </div>
-                <br />
-                <p id="GeneralText1">
-                  C# / .NET / MongoDB / Git / Embedded Systems
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill3" id="GeneralText1"></div>
-                </div>
-                <br />
-                <p id="GeneralText1">
-                  Angular / Linux / Docker / Digital Hardware
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill4" id="GeneralText1"></div>
-                </div>
-                <br />
-                <p id="GeneralText1">
-                  C / Django / Redis / AWS / Android / FPGA
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill5" id="GeneralText1"></div>
-                </div>
-                <br />
-                <p id="GeneralText1">
-                  C++ / Rust / Bash / Verilog / Neo4j / Azure
-                </p>
-                <div class="skillBar">
-                  <div class="skills skill6" id="GeneralText1"></div>
-                </div>
-              </div>
-              <br />
-              <br />
             </div>
-
-            <!-------------------------------------------------- Tab 2 -------------------------------------------------->
-            <div id="Resume" class="container tab-pane fadeIn">
-              <nav
-                class="navbar justify-content-center navbar-expand-sm navbar-dark bg-secondary sticky-top"
-              >
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Resume_section1" id="ResumeLink"
-                      >Skills</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Resume_section2" id="ResumeLink"
-                      >Experience</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#Resume_section3" id="ResumeLink"
-                      >Education</a
-                    >
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link" href="#Resume_section4" id="ResumeLink"
-                      >Projects and more</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-
-              <div id="Resume_section1">
-                <br />
-                <div id="Resume_title">
-                  <h1 id="Resume_h1">Artiom Tsimkin</h1>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="jumbotron" id="top"></div>
                 </div>
-                <br />
-                <hr class="hrLine" />
-                <!---------------------------- Skills ---------------------------->
-                <h2 id="Resume_h2">Skills</h2>
-                <div class="row">
-                  <div class="col-lg-6 col-xl-6">
-                    <div id="Resume_skills1">
-                      <ul>
-                        <li>
-                          Experience with C, C#, Python, Kotlin, and Java
-                          through different projects.
+
+                <div class="container" id="afterTitle">
+                    <!-------------------------------------------------- Nav tabs -------------------------------------------------->
+                    <ul class="nav nav-tabs" id="NavigationBar" role="tablist">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                id="page"
+                                data-toggle="tab"
+                                href="#home"
+                                title="Home tab">
+                                Welcome
+                            </a>
                         </li>
-                        <li>
-                          Working knowledge of TypeScript, JavaScript, HTML, and
-                          CSS.
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="page"
+                                data-toggle="tab"
+                                href="#Resume"
+                                title="My resume">
+                                Resume
+                            </a>
                         </li>
-                        <li>
-                          Used SQL and NoSQL in MySQL, SSMS, Redis, MongoDB, and
-                          Neo4j databases.
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="page"
+                                data-toggle="tab"
+                                href="#Projects"
+                                title="Different things I worked on">
+                                Projects
+                            </a>
                         </li>
-                        <li>
-                          Studied web development and worked on web projects.
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                id="page"
+                                data-toggle="tab"
+                                href="#Contact"
+                                title="My contact information">
+                                Contact
+                            </a>
                         </li>
-                        <li>Languages: English, Hebrew, and Russian.</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-xl-6">
-                    <div id="Resume_skills2">
-                      <ul>
-                        <li>
-                          3 years of working with FPGAs, VHDL, and digital
-                          hardware for the military.
-                        </li>
-                        <li>
-                          Experience with embedded systems, ARM, MSP, Verilog,
-                          digital design, and Assembly.
-                        </li>
-                        <li>
-                          Worked with Linux, Git, Jira, Docker, AWS, Azure, REST
-                          API, GraphQL, React, Angular, .NET, Spring, Node.js,
-                          Django, Kotest, Selenium, Kafka, NATS.io, Grafana,
-                          Swagger, Bootstrap, and more.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div id="Resume_section2">
-                <!---------------------------- Experience ---------------------------->
-                <br />
-                <hr class="hrLine" />
-
-                <h2 id="Resume_h2">Experience</h2>
-
-                <h3 id="Resume_h3">JULY 2022 – FEBRUARY 2023</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Software Engineer / </span> Qohash,
-                  Quebec City, QC
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Worked on replacing the AWS Kinesis streaming technology
-                      with Apache Kafka, resulting in a 20% improvement in
-                      startup and operation times, maintainability, testing, and
-                      reduced annual costs.
-                    </li>
-                    <li>
-                      Implemented a real-time record interceptor in Kotlin to
-                      efficiently manage multi-tenancy for the application and
-                      added visual metrics and monitoring using Grafana, thereby
-                      improving system performance.
-                    </li>
-                    <li>
-                      Migrated multiple projects to Spring Boot 3, enriching
-                      functionality while maintaining backward compatibility.
-                    </li>
-                    <li>
-                      Contributed to enhancing the coverage of unit,
-                      integration, and end-to-end testing with Kotest and
-                      Karate.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">SEPTEMBER 2021 – DECEMBER 2021</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Full-Stack Developer / </span> Entripy
-                  Custom Clothing, Oakville, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Developed full-stack features of a web application using
-                      TypeScript, Angular, and RESTful services, including
-                      implementing a responsive UI design and integrating
-                      third-party libraries to enhance functionality.
-                    </li>
-                    <li>
-                      Improved testing coverage by writing C# unit tests and
-                      end-to-end tests with SpecFlow and Selenium, resulting in
-                      a 10% reduction in reported bugs in production.
-                    </li>
-                    <li>
-                      Supported the CI/CD pipeline and maintained Azure Service
-                      Bus functions.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">NOVEMBER 2020 – DECEMBER 2020</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Application Developer / </span>
-                  QBuild Software, Markham, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Delivered front-end features using Kendo UI for jQuery and
-                      tackled the technical debt of a corporate legacy
-                      application, significantly boosting overall performance
-                      and user experience.
-                    </li>
-                    <li>
-                      Resolved critical bugs and implemented new features by
-                      developing back-end functionality using C# and SQL.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">SEPTEMBER 2020 – OCTOBER 2020</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Web Developer / </span> 416 Automation,
-                  Mississauga, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Designed and implemented Windows Services to remotely
-                      monitor disk space usage on a production line, proactively
-                      alerting on-site engineers to ensure continuous operation
-                      of critical equipment.
-                    </li>
-                    <li>
-                      Utilized ASP.NET Core Razor Pages to maintain a test
-                      result web application, including building helpful menus,
-                      demonstrating expertise in web development and user
-                      experience design.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">JANUARY 2020 – APRIL 2020</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Software Developer / </span>
-                  Clearpath, Kitchener, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Designed and developed a robust testing manager using
-                      Python and ROS for self-driving robots, resulting in
-                      significant time and cost savings by reducing production
-                      testing and field maintenance efforts by hours.
-                    </li>
-                    <li>
-                      Implemented a plugin manager to ease the process of adding
-                      new tests, improving scalability and maintenance.
-                    </li>
-                    <li>
-                      Developed a custom UI to facilitate remote testing and
-                      real-time status updates for maintenance personnel,
-                      enabling streamlined and efficient management of testing
-                      processes.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">MAY 2019 – AUGUST 2019</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Embedded Software Engineer / </span>
-                  Redline Communications, Markham, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Upgraded the S-parameter test set of a network analyzer to
-                      utilize an ARM Cortex-M4 processor, enabling customization
-                      in functionality and achieving high-performance precision
-                      at a low cost.
-                    </li>
-                    <li>
-                      Added USB interfacing to the ARM board and built a CLI in
-                      C to operate the RF components, set converter thresholds,
-                      configure SPIs, and write to Flash memory, enabling test
-                      engineers to run complex tests with ease.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">SEPTEMBER 2018 – DECEMBER 2018</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> System Support Technician / </span>
-                  Ministry of the Attorney General, Toronto, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Developed a security application in C# to assist with
-                      transferring information securely company-wide using a
-                      custom encryption algorithm.
-                    </li>
-                    <li>
-                      Developed PowerShell scripts to automate procedures and
-                      backups, speeding up workflows by up to 200%.
-                    </li>
-                    <li>
-                      Used Batch to develop an automatic backup tool to reduce
-                      the need for manual backups.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">JANUARY 2018 – APRIL 2018</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue">
-                    Software Quality Assurance Analyst /
-                  </span>
-                  Ministry of Education, Toronto, ON
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Managed and executed test scripts using SQL in an Oracle
-                      database to ensure smooth daily deployment.
-                    </li>
-                    <li>
-                      Used ALM, UFT, PL/SQL, Toad, IBM Cognos, and virtual
-                      machines to test applications on the front-end, back-end,
-                      and database sides.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">JULY 2013 – JUNE 2016</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> FPGA Design Engineer / </span>
-                  Israeli Air Force, Israel
-                </h4>
-                <div id="Resume_experience">
-                  <ul>
-                    <li>
-                      Developed VHDL code in ISE for Xilinx Virtex FPGAs and
-                      verified functionality using test benches, demonstrating
-                      expertise in digital design and simulation.
-                    </li>
-                    <li>
-                      Collaborated with senior engineers to design circuits in
-                      OrCAD, constructed wire-wrap prototypes, and tested them
-                      on mockup systems, ensuring reliable operation in
-                      high-stakes military environments.
-                    </li>
-                    <li>
-                      Contributed to hardware and software projects in a diverse
-                      team, communicating effectively with experts in various
-                      domains, to enable secure and seamless communication
-                      between air, land, and satellite assets.
-                    </li>
-                    <li>
-                      Proficiently utilized electronic tools such as
-                      multimeters, oscilloscopes, signal generators, and logic
-                      analyzers to test and repair circuits, demonstrating
-                      hands-on experience with electronics testing and
-                      troubleshooting.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div id="Resume_section3">
-                <!---------------------------- Education ---------------------------->
-                <br />
-                <hr class="hrLine" />
-
-                <h2 id="Resume_h2">Education</h2>
-                <h3 id="Resume_h3">SEPTEMBER 2017 – APRIL 2022</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> Bachelor of Applied Science / </span>
-                  Computer Engineering, University of Waterloo, Waterloo, ON
-                </h4>
-                <div id="Resume_education">
-                  <ul>
-                    <li>$2000 President’s Scholarship of Distinction.</li>
-                    <li>
-                      Excellent academic standing with a full course load while
-                      being ranked in the top quarter.
-                    </li>
-                  </ul>
-                </div>
-                <br />
-
-                <h3 id="Resume_h3">SEPTEMBER 2011 – JUNE 2013</h3>
-                <h4 id="Resume_h4">
-                  <span id="ResumeBlue"> College Diploma / </span> Computer
-                  Engineering, Kinneret College, Israel
-                </h4>
-                <div id="Resume_education">
-                  <ul>
-                    <li>
-                      Graduated with an overall A+ average while working on a
-                      project for the military: a communication board with
-                      voltage and data converters, RAM, LCD and controlled by
-                      Spartan 6 FPGA for the Sikorsky UH-60 Black Hawk military
-                      helicopter.
-                    </li>
-                    <li>
-                      Was chosen to assist a team with building a robot for the
-                      FIRST Robotics Competition.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div id="Resume_section4">
-                <!---------------------------- Projects and more ---------------------------->
-                <br />
-                <hr class="hrLine" />
-
-                <h2 id="Resume_h2">Projects and more</h2>
-                <div id="Resume_activities">
-                  <ul>
-                    <li>
-                      Created a responsive culinary app that suggests recipes
-                      based on what is available in the fridge.
-                    </li>
-                    <li>
-                      Developed a dynamic MERN app, showcasing movies with
-                      detailed info, streaming, and telemetry.
-                    </li>
-                    <li>
-                      Built an Android app with friends that matches people for
-                      video dining based on interests.
-                    </li>
-                    <li>
-                      Developed a recipe app with a friend, simplifying
-                      household favorite management.
-                    </li>
-                    <li>
-                      Crafted an encryption app in C# for Windows, featuring a
-                      custom algorithm.
-                    </li>
-                    <li>
-                      Created a full-stack employee records app for efficient
-                      management.
-                    </li>
-                    <li>
-                      Worked on an Android Truth Or Dare game with friends.
-                    </li>
-                    <li>
-                      Developed a library manager in Python using large Kaggle
-                      datasets.
-                    </li>
-                    <li>
-                      Constructed a JavaScript tool that reminds employees to
-                      record their temperature during COVID.
-                    </li>
-                    <li>Designed a Batch tool for background file backups.</li>
-                    <li>
-                      Created a PowerShell script to manage server restarts and
-                      shutdowns.
-                    </li>
-                    <li>Built a JavaScript game similar to SkyRoads.</li>
-                    <li>
-                      Designed and created this responsive personal website.
-                    </li>
-                    <li>
-                      Developed a Windows service for disk space monitoring and
-                      email notifications.
-                    </li>
-                    <li>
-                      Created a mobile game where players earn points by
-                      swinging their devices.
-                    </li>
-                    <li>
-                      Assembled a Raspberry Pi-powered smart mirror that
-                      displays widgets.
-                    </li>
-                    <li>
-                      Developed a car toy that follows the user during a
-                      hackathon.
-                    </li>
-                    <li>
-                      Made a toy that shows the temperature when the user claps.
-                    </li>
-                    <li>
-                      Designed an embedded system that manages a greenhouse over
-                      a CLI.
-                    </li>
-                    <li>
-                      Built a touch-display clock using a Discovery board by ST.
-                    </li>
-                    <li>
-                      Constructed a device that flips pages as the user reads
-                      for a hackathon.
-                    </li>
-                    <li>
-                      Created a Simon Says game with lights and sounds for a
-                      programming course.
-                    </li>
-                    <li>
-                      Built a small board to control lights in drawers and
-                      shelves.
-                    </li>
-                    <li>
-                      Installed a GPS module, a touch screen, reverse sensors,
-                      and fancy lights on my car.
-                    </li>
-                    <li>
-                      Developed a simple 5-stage pipeline RISC-V processor in
-                      Verilog.
-                    </li>
-                    <li>
-                      Worked on a wireless robot during a university
-                      competition.
-                    </li>
-                    <li>
-                      Grade 12 project: a robot with an arm that avoids
-                      obstacles and picks things up.
-                    </li>
-                    <li>
-                      Grade 11 project: light-sensitive car counter for a
-                      parking lot.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <br />
-            </div>
-
-            <!-------------------------------------------------- Tab 3 -------------------------------------------------->
-            <div id="Projects" class="container tab-pane fadeIn">
-              <br />
-              <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-              </div>
-
-              <div
-                id="demo"
-                class="carousel slide"
-                data-ride="carousel"
-                data-interval="3000"
-              >
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                  <li data-target="#demo" data-slide-to="0" class="active"></li>
-                  <li data-target="#demo" data-slide-to="1"></li>
-                  <li data-target="#demo" data-slide-to="2"></li>
-                  <li data-target="#demo" data-slide-to="3"></li>
-                  <li data-target="#demo" data-slide-to="4"></li>
-                  <li data-target="#demo" data-slide-to="5"></li>
-                  <li data-target="#demo" data-slide-to="6"></li>
-                  <li data-target="#demo" data-slide-to="7"></li>
-                  <li data-target="#demo" data-slide-to="8"></li>
-                  <li data-target="#demo" data-slide-to="9"></li>
-                  <li data-target="#demo" data-slide-to="10"></li>
-                  <li data-target="#demo" data-slide-to="11"></li>
-                  <li data-target="#demo" data-slide-to="12"></li>
-                  <li data-target="#demo" data-slide-to="13"></li>
-                </ul>
-
-                <!-- The slideshow -->
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="pics/projects/projectPic1.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic2.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic3.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic4.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic5.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic6.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic7.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic8.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic9.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic10.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic11.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic12.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic13.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="pics/projects/projectPic14.jpg"
-                      alt="Project Pic"
-                    />
-                  </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </a>
-              </div>
-              <br />
-              <br />
-
-              <!-- the projects -->
-              <h2 id="GeneralTitle3">Software</h2>
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Feed Me
-                    <div id="ProjectTool">
-                      JavaScript, React, Python, Django, Redis, SQLite
-                    </div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Feed Me transforms home cooking into an enjoyable and
-                    effortless experience. Featuring 12,000+ recipes and 1,000+
-                    ingredients, the app offers base items and a unique matching
-                    threshold feature. Discover exciting dishes based on what's
-                    in your fridge, and elevate your culinary adventures with
-                    ease!
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_feedMe.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Movie Board
-                    <div id="ProjectTool">
-                      JavaScript, React, Node.js, MongoDB
-                    </div>
-                  </h3>
-                  <p id="GeneralText3">
-                    A dynamic movie website designed to immerse users in the
-                    world of cinema. This platform offers a multitude of
-                    features, including access to trending movies and TV shows,
-                    detailed movie searches, recommendations for similar films,
-                    streaming options, and comprehensive movie information.
-                    Users can explore genres, overviews, trailers, cast,
-                    reviews, and more. Additionally, Movie Board provides
-                    telemetry data, displaying visitor statistics for the past
-                    month.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_movieBoard.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    dineShare
-                    <div id="ProjectTool">
-                      Python, JavaScript, Kotlin, Android, Node.js, Flask, AWS
-                    </div>
-                  </h3>
-                  <p id="GeneralText3">
-                    As part of a fourth-year design project, my team and I
-                    introduced dineShare, an Android-based social dining app
-                    that served as a beacon of connection during the challenging
-                    times of COVID-19. My specific contribution to this project
-                    involved developing a Python-based optimization engine. This
-                    engine intelligently matches users for conversations based
-                    on their selected interests, fostering meaningful
-                    interactions in the best possible way.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_dineShare.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    RestRo
-                    <div id="ProjectTool">
-                      JavaScript, Java, Spring, MySQL, Docker
-                    </div>
-                  </h3>
-                  <p id="GeneralText3">
-                    This feature-rich platform offers a seamless experience for
-                    recipe enthusiasts. Users can effortlessly list, update,
-                    add, and delete recipes, catering to their culinary
-                    creativity. RestRo goes beyond language barriers by
-                    providing support for multiple languages. It encompasses an
-                    array of essential fields, including comments, descriptions,
-                    ingredients, instructions, and more, to enhance the cooking
-                    journey for users worldwide.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_restRo.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Crypto
-                    <div id="ProjectTool">C#, Windows Forms</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Developed a robust text encryption and decryption tool for
-                    secure information transfer. Features include user login,
-                    clear instructions, text file export, and support for three
-                    encryption methods.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_crypto.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Employeezee
-                    <div id="ProjectTool">
-                      JavaScript, React, Node.js, MySQL, Docker
-                    </div>
-                  </h3>
-                  <p id="GeneralText3">
-                    This versatile tool empowers users to effortlessly create,
-                    display, update, and delete employee records. Employeezee
-                    incorporates intuitive validation and confirmation features
-                    for smooth and efficient record management.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_employeezee.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Truth Or Dare
-                    <div id="ProjectTool">Java, Android</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Collaboratively developed a popular Android party game for
-                    up to 15 players. This app offers audio support, a dynamic
-                    scoreboard, and extensive customization options for hundreds
-                    of truths and dares.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_truthDare.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Library Management
-                    <div id="ProjectTool">Python, SQL</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Designed and built a powerful library management tool that
-                    handles books, checkouts, authors, publishers, user data,
-                    addresses, late returns, and more.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_library.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    TempTracker
-                    <div id="ProjectTool">JavaScript, Google Apps Script</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Developed a user-friendly reminder system for employees to
-                    record daily temperatures during the COVID pandemic.
-                    Features include direct links to Google Sheets, reminder
-                    tracking, and automated end-of-day reports to management.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_temperature.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    AutoDoc
-                    <div id="ProjectTool">Batch, Windows</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    A background backup tool that empowers users to schedule
-                    folder backups with precision. It intelligently handles
-                    missing folders, path errors, duplicates, and provides
-                    comprehensive logs.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_autodoc.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Server Manager
-                    <div id="ProjectTool">PowerShell, Windows</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Engineered a script to monitor server statuses on the
-                    network, providing real-time updates, change timestamps, and
-                    the capability to restart or shut down servers as needed.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_powershell.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    BlockRide
-                    <div id="ProjectTool">HTML, CSS, JavaScript</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    A thrilling game reminiscent of SkyRoads, challenging
-                    players to navigate 10 levels while evading flying
-                    obstacles.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_game.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    CalculatoR
-                    <div id="ProjectTool">C#, Windows Forms</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    A classic calculator app with common functionality for
-                    Windows users, combining functionality with aesthetics.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_calculator.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    This Website
-                    <div id="ProjectTool">HTML, CSS, JavaScript, Bootstrap</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Revamped my personal website, harnessing JavaScript and
-                    Bootstrap for responsiveness, enhanced aesthetics with
-                    Google Fonts, integrated a map, and introduced captivating
-                    animations.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_website.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <h2 id="GeneralTitle3">Embedded</h2>
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Magic Mirror
-                    <div id="ProjectTool">Python + Raspberry Pi</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Crafted a smart mirror using a two-way glass overlay on a
-                    Raspberry Pi-powered monitor. This innovative mirror
-                    displays real-time information, including the time, weather
-                    updates, latest news, and daily motivational quotes.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_mirror.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Prototype for a military communication board
-                    <div id="ProjectTool">VHDL + Spartan FPGA</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    In my second year of college, I contributed to a significant
-                    project at a military base. I played a pivotal role in
-                    designing a board later mass-produced and installed on
-                    military aircraft. The board featured an FPGA running on
-                    VHDL code, voltage and data converters, RAM, and an LCD.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_projectant.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Automated RF Test Station
-                    <div id="ProjectTool">C + ARM Cortex-M</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    During my third work term, I developed an automated RF test
-                    environment. A user-friendly CLI offers functionality to
-                    efficiently measure the S-parameters of boards and
-                    components, streamlining the testing process.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_redline.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Maintenance Server
-                    <div id="ProjectTool">Python, ROS</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    During my fourth work term, I developed a Python-based
-                    testing service, integral to the ROS system of self-driving
-                    robots. This service revolutionized the assembly and field
-                    maintenance processes by executing both manual and automated
-                    tests on the robot's hardware. Its efficiency not only saved
-                    valuable time but also enhanced the reliability of the
-                    robots.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_maintenanceServer.png"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    TeslaToy
-                    <div id="ProjectTool">C + Arduino</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    During a hackathon event, I collaborated with two friends to
-                    transform a conventional toy into an interactive
-                    user-following car. The car utilized GPS and accelerometer
-                    data from the user's phone to autonomously track and follow
-                    them, controlled by an Arduino.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_teslatoy.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Tempocute
-                    <div id="ProjectTool">C + Arduino</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    This charming gadget displays temperature in both Celsius
-                    and Fahrenheit when clapped twice. Powered by A4 batteries,
-                    it adapts its display color based on ambient light
-                    conditions, combining functionality with a touch of whimsy.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_tempocute.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Greenhouse Watcher
-                    <div id="ProjectTool">C + MSP430</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    As part of a school project, a friend and I designed an
-                    agriculture monitoring system for greenhouses. This system
-                    managed temperature and soil moisture in different zones by
-                    controlling ventilation and aggregation motors. Data was
-                    displayed on an LCD, and the system could be controlled via
-                    a CLI. We also designed and ordered a custom PCB for the
-                    final prototype.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_ece298.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    TouchClock
-                    <div id="ProjectTool">Java</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Crafted a touch-controlled clock using the ST Discovery
-                    board and their GUI software, offering an elegant and
-                    interactive time-telling experience.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_clock.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Flipper
-                    <div id="ProjectTool">C, Java + Arduino, Android</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    During another hackathon, a friend and I engineered a device
-                    that flips book pages as the user reads. Controlled by the
-                    user's voice commands or an Android app, a simple "Forward"
-                    or "Backward" would trigger page turns, offering a unique
-                    reading experience.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_flipper.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Simon Says
-                    <div id="ProjectTool">C++ + Omega2</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    As part of a programming course, two friends and I developed
-                    an engaging Simon Says game. Featuring vibrant lights,
-                    captivating sounds, and ten challenging levels, the game
-                    also analyzed and presented statistics on the performance of
-                    different player groups.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_simon.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Lightus
-                    <div id="ProjectTool">Hardware</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    In college, I designed a small board to automatically
-                    illuminate dark drawers and shelves when opened. Integrated
-                    with LEDs and sensors, it sensed darkness and open drawers
-                    or shelves, enhancing convenience in everyday life.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_lightus.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Car Stuff
-                    <div id="ProjectTool">Hardware</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Collaborating with my dad, we enhanced my car's
-                    functionality with reverse and tire pressure sensors,
-                    stylish lighting, a reverse camera, GPS capabilities, a
-                    touchscreen interface, and more.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_car.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <h2 id="GeneralTitle3">Non-Technical</h2>
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Music
-                    <div id="ProjectTool">Fruity Loops</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    Throughout high school and college, I passionately played
-                    the guitar, collaborated with friends to create covers, and
-                    recorded original songs. It was a proud moment when one of
-                    my compositions was featured on the radio.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_fruityloops.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Editing
-                    <div id="ProjectTool">Adobe Creative Suite</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    In my free time, I embarked on a creative exploration of
-                    visual storytelling. I honed my skills in Adobe Photoshop,
-                    After Effects, and Flash, enabling me to craft captivating
-                    animations, as well as edit and enhance photos and videos
-                    with precision.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_photoshop.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h3 id="GeneralTitleSmall3">
-                    Drawing
-                    <div id="ProjectTool">pen and paper</div>
-                  </h3>
-                  <p id="GeneralText3">
-                    During my high school years, I immersed myself in the world
-                    of art and creativity. I channeled my imagination into
-                    drawing comics and anime, producing visually captivating and
-                    imaginative pieces that reflected my passion for
-                    storytelling through art.
-                  </p>
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <img
-                    src="pics/projects/p_drawing.jpg"
-                    class="img-thumbnail right"
-                    id="ProjectPic"
-                    alt="Project pic failed to load"
-                  />
-                </div>
-              </div>
-              <br />
-              <br />
-            </div>
-
-            <!-------------------------------------------------- Tab 4 -------------------------------------------------->
-            <div id="Contact" class="container tab-pane fadeIn">
-              <br />
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h2 id="GeneralTitle4">University</h2>
-                  <br />
-                  <p id="GeneralText4">
-                    Email:
-                    <a
-                      href="mailto:atsimkin@uwaterloo.ca"
-                      title="My University email"
-                      id="email"
-                      target="_blank"
-                      >atsimkin@uwaterloo.ca</a
-                    >
-                    &nbsp;
-                    <button onclick="copytext('#email')" title="Copy my email">
-                      Copy
-                    </button>
-                  </p>
-                  <br />
-                  <p id="GeneralText4">
-                    University:
-                    <a
-                      href="https://uwaterloo.ca/"
-                      target="_blank"
-                      title="My University"
-                    >
-                      University of Waterloo
-                    </a>
-                  </p>
-                  <br />
-                  <br />
-                  <div id="map"></div>
-                  <br />
-                  <br />
-                  <br />
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h2 id="GeneralTitle4">Personal</h2>
-                  <br />
-                  <p id="GeneralText4">
-                    Github:
-                    <a
-                      href="https://github.com/artiomtz"
-                      target="_blank"
-                      title="My Github"
-                    >
-                      artiomtz
-                    </a>
-                  </p>
-                  <br />
-                  <p id="GeneralText4">
-                    Address:
-                    <a
-                      href="https://www.google.co.il/maps/place/Waterloo,+ON"
-                      target="_blank"
-                      title="My address"
-                    >
-                      Waterloo, Ontario, Canada
-                    </a>
-                  </p>
-                  <br />
-                  <br />
-                  <div>
-                    <ul id="contacts">
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/in/artiom-tsimkin"
-                          class="fa fa-linkedin"
-                          title="My LinkedIn"
-                          target="_blank"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="mailto:artiomtz@gmail.com"
-                          class="fa fa-google"
-                          title="My Gmail"
-                          target="_blank"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.facebook.com/artiomtz"
-                          class="fa fa-facebook"
-                          title="My Facebook"
-                          target="_blank"
-                        ></a>
-                      </li>
-                      &nbsp; &nbsp;
                     </ul>
-                  </div>
-                  <img
-                    src="pics/signature.png"
-                    id="signature"
-                    alt="My signature failed to load"
-                  />
-                  <br />
-                </div>
-              </div>
-              <br />
-              <br />
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-          </div>
-        </div>
-        <br />
-        <div class="container-fluid text-center">
-          <div class="jumbotron">
-            <p id="foot">&copy; Artiom Tsimkin University of Waterloo &copy;</p>
-          </div>
-        </div>
-      </div>
 
-      <p id="animationCopyRight">
-        Background animation belongs to Julian Garnier
-      </p>
-      <p></p>
-    </div>
-  </body>
+                    <div class="tab-content">
+                        <!-------------------------------------------------- Tab 1 -------------------------------------------------->
+                        <div id="home" class="container tab-pane active fadeIn">
+                            <div id="aboutMe" class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-8 col-xl-8">
+                                        <h2 id="GeneralTitle1">About me</h2>
+                                        <br />
+                                        <p id="GeneralText1">
+                                            Welcome to my website!
+                                            <br />
+                                            I'm a Belarusian-born professional who has lived across
+                                            three continents and now resides in Canada. My diverse
+                                            background has given me a unique perspective and set of
+                                            skills.
+                                        </p>
+                                        <p id="GeneralText1">
+                                            After earning a diploma in computer engineering from
+                                            college, I was selected for a military program where I
+                                            worked on an Air Force project while completing my
+                                            studies. I then spent three years working in an R&D
+                                            team, where I focused on planning, building, installing,
+                                            and supporting digital hardware systems using VHDL
+                                            coding.
+                                        </p>
+                                        <p id="GeneralText1">
+                                            In 2016, I moved to Canada and pursued a degree in
+                                            Computer Engineering at the University of Waterloo. I
+                                            graduated in 2022 and am now working in the back-end and
+                                            full-stack fields. I enjoy working on embedded and
+                                            software projects, making music, and staying active with
+                                            sports. With fluency in three languages and a strong
+                                            work ethic, I'm excited to continue growing my skills
+                                            and making an impact in my industry.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-4">
+                                        <img
+                                            src="pics/MyPic.jpg"
+                                            class="img-thumbnail center"
+                                            id="myPic"
+                                            alt="My pic failed to load" />
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div id="SkillsBox" class="container-fluid">
+                                <h2 id="GeneralTitle1">My Skills</h2>
+                                <br />
+                                <p id="GeneralText1">
+                                    Java / Python / JavaScript / SQL / React / Spring Boot / Docker
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill1" id="GeneralText1"></div>
+                                </div>
+                                <br />
+                                <p id="GeneralText1">
+                                    Kotlin / TypeScript / HTML / CSS / Node.js / Maven / Git / Linux
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill2" id="GeneralText1"></div>
+                                </div>
+                                <br />
+                                <p id="GeneralText1">
+                                    C# / .NET / Redis / MongoDB / Kubernetes / Helm / Jenkins
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill3" id="GeneralText1"></div>
+                                </div>
+                                <br />
+                                <p id="GeneralText1">
+                                    Bash / Angular / MinIO / Liquibase / GraphQL / Airflow / Jupyter
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill4" id="GeneralText1"></div>
+                                </div>
+                                <br />
+                                <p id="GeneralText1">
+                                    C / Django / Neo4j / Elasticsearch / Grafana / AWS / Android
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill5" id="GeneralText1"></div>
+                                </div>
+                                <br />
+                                <p id="GeneralText1">
+                                    C++ / Verilog / FPGA / Embedded Systems / Digital Hardware
+                                </p>
+                                <div class="skillBar">
+                                    <div class="skills skill6" id="GeneralText1"></div>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+
+                        <!-------------------------------------------------- Tab 2 -------------------------------------------------->
+                        <div id="Resume" class="container tab-pane fadeIn">
+                            <nav
+                                class="navbar justify-content-center navbar-expand-sm navbar-dark bg-secondary sticky-top">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Resume_section1" id="ResumeLink">
+                                            Skills
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Resume_section2" id="ResumeLink">
+                                            Experience
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Resume_section3" id="ResumeLink">
+                                            Education
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#Resume_section4" id="ResumeLink">
+                                            Projects and more
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="Resume_section1">
+                                <br />
+                                <div id="Resume_title">
+                                    <h1 id="Resume_h1">Artiom Tsimkin</h1>
+                                </div>
+                                <br />
+                                <hr class="hrLine" />
+                                <!---------------------------- Skills ---------------------------->
+                                <h2 id="Resume_h2">Skills</h2>
+                                <div class="row">
+                                    <div class="col-lg-6 col-xl-6">
+                                        <div id="Resume_skills1">
+                                            <ul>
+                                                <li>
+                                                    Experience with Java, JavaScript, Python, and
+                                                    Kotlin through different projects.
+                                                </li>
+                                                <li>
+                                                    Built applications with React, Spring Boot, and
+                                                    Node.js.
+                                                </li>
+                                                <li>
+                                                    Used SQL and NoSQL in MySQL, MSSQL, Redis,
+                                                    MongoDB, and Neo4j databases.
+                                                </li>
+                                                <li>
+                                                    Working knowledge of Git, Docker, Kubernetes,
+                                                    and Linux.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6">
+                                        <div id="Resume_skills2">
+                                            <ul>
+                                                <li>
+                                                    3 years of working with FPGAs, VHDL, and digital
+                                                    hardware for the military.
+                                                </li>
+                                                <li>
+                                                    Experience with embedded systems, ARM, MSP,
+                                                    Verilog, digital design, and Assembly.
+                                                </li>
+                                                <li>Languages: English, Hebrew, and Russian.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Resume_section2">
+                                <!---------------------------- Experience ---------------------------->
+                                <br />
+                                <hr class="hrLine" />
+
+                                <h2 id="Resume_h2">Experience</h2>
+
+                                <h3 id="Resume_h3">JANUARY 2024 – PRESENT</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Software Engineer /</span>
+                                    Scotiabank, Toronto, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Implementing Good To Trade functionality in Java and
+                                            Spring Boot to ensure trading counterparty compliance,
+                                            enhancing regulatory workflows in a PostgreSQL-backed
+                                            system.
+                                        </li>
+                                        <li>
+                                            Integrating Wall Street trading systems under Pre-Trade
+                                            Mid-Market Mark disclosure regulations using Python,
+                                            React, and Liquibase to ensure transparent swap pricing
+                                            in compliance with CFTC rules.
+                                        </li>
+                                        <li>
+                                            Deploying and maintaining third-party trading software
+                                            on Red Hat Linux utilizing Docker, Kubernetes, and
+                                            Jenkins, optimizing system integration and lifecycle
+                                            management.
+                                        </li>
+                                        <li>
+                                            Supporting the SONIA benchmark project with Bash and
+                                            Python automation, improving reporting accuracy and
+                                            ensuring accurate financial benchmark calculations for
+                                            sterling-denominated transactions.
+                                        </li>
+                                        <li>
+                                            Automating regulatory reporting workflows with Apache
+                                            Airflow, Python, and Jupyter, integrating MinIO for
+                                            scheduled data processing to meet Canadian compliance
+                                            requirements.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">JULY 2022 – FEBRUARY 2023</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Software Engineer /</span>
+                                    Qohash, Quebec City, QC
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Worked on replacing the AWS Kinesis streaming technology
+                                            with Apache Kafka, resulting in a 20% improvement in
+                                            startup and operation times, maintainability, testing,
+                                            and reduced annual costs.
+                                        </li>
+                                        <li>
+                                            Implemented a real-time record interceptor in Kotlin to
+                                            efficiently manage multi-tenancy for the application and
+                                            added visual metrics and monitoring using Grafana,
+                                            thereby improving system performance.
+                                        </li>
+                                        <li>
+                                            Migrated multiple projects to Spring Boot 3, enriching
+                                            functionality while maintaining backward compatibility.
+                                        </li>
+                                        <li>
+                                            Contributed to enhancing the coverage of unit,
+                                            integration, and end-to-end testing with Kotest and
+                                            Karate.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">SEPTEMBER 2021 – DECEMBER 2021</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Full-Stack Developer /</span>
+                                    Entripy Custom Clothing, Oakville, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Developed full-stack features of a web application using
+                                            TypeScript, Angular, and RESTful services, including
+                                            implementing a responsive UI design and integrating
+                                            third-party libraries to enhance functionality.
+                                        </li>
+                                        <li>
+                                            Improved testing coverage by writing C# unit tests and
+                                            end-to-end tests with SpecFlow and Selenium, resulting
+                                            in a 10% reduction in reported bugs in production.
+                                        </li>
+                                        <li>
+                                            Supported the CI/CD pipeline and maintained Azure
+                                            Service Bus functions.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">NOVEMBER 2020 – DECEMBER 2020</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Application Developer /</span>
+                                    QBuild Software, Markham, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Delivered front-end features using Kendo UI for jQuery
+                                            and tackled the technical debt of a corporate legacy
+                                            application, significantly boosting overall performance
+                                            and user experience.
+                                        </li>
+                                        <li>
+                                            Resolved critical bugs and implemented new features by
+                                            developing back-end functionality using C# and SQL.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">SEPTEMBER 2020 – OCTOBER 2020</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Web Developer /</span>
+                                    416 Automation, Mississauga, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Designed and implemented Windows Services to remotely
+                                            monitor disk space usage on a production line,
+                                            proactively alerting on-site engineers to ensure
+                                            continuous operation of critical equipment.
+                                        </li>
+                                        <li>
+                                            Utilized ASP.NET Core Razor Pages to maintain a test
+                                            result web application, including building helpful
+                                            menus, demonstrating expertise in web development and
+                                            user experience design.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">JANUARY 2020 – APRIL 2020</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Software Developer /</span>
+                                    Clearpath, Kitchener, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Designed and developed a robust testing manager using
+                                            Python and ROS for self-driving robots, resulting in
+                                            significant time and cost savings by reducing production
+                                            testing and field maintenance efforts by hours.
+                                        </li>
+                                        <li>
+                                            Implemented a plugin manager to ease the process of
+                                            adding new tests, improving scalability and maintenance.
+                                        </li>
+                                        <li>
+                                            Developed a custom UI to facilitate remote testing and
+                                            real-time status updates for maintenance personnel,
+                                            enabling streamlined and efficient management of testing
+                                            processes.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">MAY 2019 – AUGUST 2019</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Embedded Software Engineer /</span>
+                                    Redline Communications, Markham, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Upgraded the S-parameter test set of a network analyzer
+                                            to utilize an ARM Cortex-M4 processor, enabling
+                                            customization in functionality and achieving
+                                            high-performance precision at a low cost.
+                                        </li>
+                                        <li>
+                                            Added USB interfacing to the ARM board and built a CLI
+                                            in C to operate the RF components, set converter
+                                            thresholds, configure SPIs, and write to Flash memory,
+                                            enabling test engineers to run complex tests with ease.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">SEPTEMBER 2018 – DECEMBER 2018</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">System Support Technician /</span>
+                                    Ministry of the Attorney General, Toronto, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Developed a security application in C# to assist with
+                                            transferring information securely company-wide using a
+                                            custom encryption algorithm.
+                                        </li>
+                                        <li>
+                                            Developed PowerShell scripts to automate procedures and
+                                            backups, speeding up workflows by up to 200%.
+                                        </li>
+                                        <li>
+                                            Used Batch to develop an automatic backup tool to reduce
+                                            the need for manual backups.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">JANUARY 2018 – APRIL 2018</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">
+                                        Software Quality Assurance Analyst /
+                                    </span>
+                                    Ministry of Education, Toronto, ON
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Managed and executed test scripts using SQL in an Oracle
+                                            database to ensure smooth daily deployment.
+                                        </li>
+                                        <li>
+                                            Used ALM, UFT, PL/SQL, Toad, IBM Cognos, and virtual
+                                            machines to test applications on the front-end,
+                                            back-end, and database sides.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">JULY 2013 – JUNE 2016</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">FPGA Design Engineer /</span>
+                                    Air Force, Europe
+                                </h4>
+                                <div id="Resume_experience">
+                                    <ul>
+                                        <li>
+                                            Developed VHDL code in ISE for Xilinx Virtex FPGAs and
+                                            verified functionality using test benches, demonstrating
+                                            expertise in digital design and simulation.
+                                        </li>
+                                        <li>
+                                            Collaborated with senior engineers to design circuits in
+                                            OrCAD, constructed wire-wrap prototypes, and tested them
+                                            on mockup systems, ensuring reliable operation in
+                                            high-stakes military environments.
+                                        </li>
+                                        <li>
+                                            Contributed to hardware and software projects in a
+                                            diverse team, communicating effectively with experts in
+                                            various domains, to enable secure and seamless
+                                            communication between air, land, and satellite assets.
+                                        </li>
+                                        <li>
+                                            Proficiently utilized electronic tools such as
+                                            multimeters, oscilloscopes, signal generators, and logic
+                                            analyzers to test and repair circuits, demonstrating
+                                            hands-on experience with electronics testing and
+                                            troubleshooting.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="Resume_section3">
+                                <!---------------------------- Education ---------------------------->
+                                <br />
+                                <hr class="hrLine" />
+
+                                <h2 id="Resume_h2">Education</h2>
+                                <h3 id="Resume_h3">SEPTEMBER 2017 – APRIL 2022</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">Bachelor of Applied Science /</span>
+                                    Computer Engineering, University of Waterloo, Waterloo, ON
+                                </h4>
+                                <div id="Resume_education">
+                                    <ul>
+                                        <li>$2000 President’s Scholarship of Distinction.</li>
+                                        <li>
+                                            Excellent academic standing with a full course load
+                                            while being ranked in the top quarter.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+
+                                <h3 id="Resume_h3">SEPTEMBER 2011 – JUNE 2013</h3>
+                                <h4 id="Resume_h4">
+                                    <span id="ResumeBlue">College Diploma /</span>
+                                    Computer Engineering, Kinneret College, Europe
+                                </h4>
+                                <div id="Resume_education">
+                                    <ul>
+                                        <li>
+                                            Graduated with an overall A+ average while working on a
+                                            project for the military: a communication board with
+                                            voltage and data converters, RAM, LCD and controlled by
+                                            Spartan 6 FPGA for the Sikorsky UH-60 Black Hawk
+                                            military helicopter.
+                                        </li>
+                                        <li>
+                                            Was chosen to assist a team with building a robot for
+                                            the FIRST Robotics Competition.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="Resume_section4">
+                                <!---------------------------- Projects and more ---------------------------->
+                                <br />
+                                <hr class="hrLine" />
+
+                                <h2 id="Resume_h2">Projects and more</h2>
+                                <div id="Resume_activities">
+                                    <ul>
+                                        <li>
+                                            Created a responsive culinary app that suggests recipes
+                                            based on what is available in the fridge.
+                                        </li>
+                                        <li>
+                                            Developed a dynamic MERN app, showcasing movies with
+                                            detailed info, streaming, and telemetry.
+                                        </li>
+                                        <li>
+                                            Built an Android app with friends that matches people
+                                            for video dining based on interests.
+                                        </li>
+                                        <li>
+                                            Developed a recipe app with a friend, simplifying
+                                            household favorite management.
+                                        </li>
+                                        <li>
+                                            Crafted an encryption app in C# for Windows, featuring a
+                                            custom algorithm.
+                                        </li>
+                                        <li>
+                                            Created a full-stack employee records app for efficient
+                                            management.
+                                        </li>
+                                        <li>
+                                            Worked on an Android Truth Or Dare game with friends.
+                                        </li>
+                                        <li>
+                                            Developed a library manager in Python using large Kaggle
+                                            datasets.
+                                        </li>
+                                        <li>
+                                            Constructed a JavaScript tool that reminds employees to
+                                            record their temperature during COVID.
+                                        </li>
+                                        <li>Designed a Batch tool for background file backups.</li>
+                                        <li>
+                                            Created a PowerShell script to manage server restarts
+                                            and shutdowns.
+                                        </li>
+                                        <li>Built a JavaScript game similar to SkyRoads.</li>
+                                        <li>
+                                            Designed and created this responsive personal website.
+                                        </li>
+                                        <li>
+                                            Developed a Windows service for disk space monitoring
+                                            and email notifications.
+                                        </li>
+                                        <li>
+                                            Created a mobile game where players earn points by
+                                            swinging their devices.
+                                        </li>
+                                        <li>
+                                            Assembled a Raspberry Pi-powered smart mirror that
+                                            displays widgets.
+                                        </li>
+                                        <li>
+                                            Developed a car toy that follows the user during a
+                                            hackathon.
+                                        </li>
+                                        <li>
+                                            Made a toy that shows the temperature when the user
+                                            claps.
+                                        </li>
+                                        <li>
+                                            Designed an embedded system that manages a greenhouse
+                                            over a CLI.
+                                        </li>
+                                        <li>
+                                            Built a touch-display clock using a Discovery board by
+                                            ST.
+                                        </li>
+                                        <li>
+                                            Constructed a device that flips pages as the user reads
+                                            for a hackathon.
+                                        </li>
+                                        <li>
+                                            Created a Simon Says game with lights and sounds for a
+                                            programming course.
+                                        </li>
+                                        <li>
+                                            Built a small board to control lights in drawers and
+                                            shelves.
+                                        </li>
+                                        <li>
+                                            Installed a GPS module, a touch screen, reverse sensors,
+                                            and fancy lights on my car.
+                                        </li>
+                                        <li>
+                                            Developed a simple 5-stage pipeline RISC-V processor in
+                                            Verilog.
+                                        </li>
+                                        <li>
+                                            Worked on a wireless robot during a university
+                                            competition.
+                                        </li>
+                                        <li>
+                                            Grade 12 project: a robot with an arm that avoids
+                                            obstacles and picks things up.
+                                        </li>
+                                        <li>
+                                            Grade 11 project: light-sensitive car counter for a
+                                            parking lot.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+
+                        <!-------------------------------------------------- Tab 3 -------------------------------------------------->
+                        <div id="Projects" class="container tab-pane fadeIn">
+                            <br />
+                            <div class="progress-container">
+                                <div class="progress-bar" id="myBar"></div>
+                            </div>
+
+                            <div
+                                id="demo"
+                                class="carousel slide"
+                                data-ride="carousel"
+                                data-interval="3000">
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                    <li data-target="#demo" data-slide-to="3"></li>
+                                    <li data-target="#demo" data-slide-to="4"></li>
+                                    <li data-target="#demo" data-slide-to="5"></li>
+                                    <li data-target="#demo" data-slide-to="6"></li>
+                                    <li data-target="#demo" data-slide-to="7"></li>
+                                    <li data-target="#demo" data-slide-to="8"></li>
+                                    <li data-target="#demo" data-slide-to="9"></li>
+                                    <li data-target="#demo" data-slide-to="10"></li>
+                                    <li data-target="#demo" data-slide-to="11"></li>
+                                    <li data-target="#demo" data-slide-to="12"></li>
+                                    <li data-target="#demo" data-slide-to="13"></li>
+                                </ul>
+
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img
+                                            src="pics/projects/projectPic1.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic2.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic3.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic4.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic5.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic6.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic7.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic8.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic9.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic10.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic11.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic12.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic13.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="pics/projects/projectPic14.jpg"
+                                            alt="Project Pic" />
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                            <br />
+                            <br />
+
+                            <!-- the projects -->
+                            <h2 id="GeneralTitle3">Software</h2>
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Feed Me
+                                        <div id="ProjectTool">
+                                            JavaScript, React, Python, Django, Redis, SQLite
+                                        </div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Feed Me transforms home cooking into an enjoyable and
+                                        effortless experience. Featuring 12,000+ recipes and 1,000+
+                                        ingredients, the app offers base items and a unique matching
+                                        threshold feature. Discover exciting dishes based on what's
+                                        in your fridge, and elevate your culinary adventures with
+                                        ease!
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_feedMe.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Movie Board
+                                        <div id="ProjectTool">
+                                            JavaScript, React, Node.js, MongoDB
+                                        </div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        A dynamic movie website designed to immerse users in the
+                                        world of cinema. This platform offers a multitude of
+                                        features, including access to trending movies and TV shows,
+                                        detailed movie searches, recommendations for similar films,
+                                        streaming options, and comprehensive movie information.
+                                        Users can explore genres, overviews, trailers, cast,
+                                        reviews, and more. Additionally, Movie Board provides
+                                        telemetry data, displaying visitor statistics for the past
+                                        month.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_movieBoard.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        dineShare
+                                        <div id="ProjectTool">
+                                            Python, JavaScript, Kotlin, Android, Node.js, Flask, AWS
+                                        </div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        As part of a fourth-year design project, my team and I
+                                        introduced dineShare, an Android-based social dining app
+                                        that served as a beacon of connection during the challenging
+                                        times of COVID-19. My specific contribution to this project
+                                        involved developing a Python-based optimization engine. This
+                                        engine intelligently matches users for conversations based
+                                        on their selected interests, fostering meaningful
+                                        interactions in the best possible way.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_dineShare.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        RestRo
+                                        <div id="ProjectTool">
+                                            JavaScript, Java, Spring, MySQL, Docker
+                                        </div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        This feature-rich platform offers a seamless experience for
+                                        recipe enthusiasts. Users can effortlessly list, update,
+                                        add, and delete recipes, catering to their culinary
+                                        creativity. RestRo goes beyond language barriers by
+                                        providing support for multiple languages. It encompasses an
+                                        array of essential fields, including comments, descriptions,
+                                        ingredients, instructions, and more, to enhance the cooking
+                                        journey for users worldwide.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_restRo.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Crypto
+                                        <div id="ProjectTool">C#, Windows Forms</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Developed a robust text encryption and decryption tool for
+                                        secure information transfer. Features include user login,
+                                        clear instructions, text file export, and support for three
+                                        encryption methods.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_crypto.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Employeezee
+                                        <div id="ProjectTool">
+                                            JavaScript, React, Node.js, MySQL, Docker
+                                        </div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        This versatile tool empowers users to effortlessly create,
+                                        display, update, and delete employee records. Employeezee
+                                        incorporates intuitive validation and confirmation features
+                                        for smooth and efficient record management.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_employeezee.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Truth Or Dare
+                                        <div id="ProjectTool">Java, Android</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Collaboratively developed a popular Android party game for
+                                        up to 15 players. This app offers audio support, a dynamic
+                                        scoreboard, and extensive customization options for hundreds
+                                        of truths and dares.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_truthDare.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Library Management
+                                        <div id="ProjectTool">Python, SQL</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Designed and built a powerful library management tool that
+                                        handles books, checkouts, authors, publishers, user data,
+                                        addresses, late returns, and more.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_library.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        TempTracker
+                                        <div id="ProjectTool">JavaScript, Google Apps Script</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Developed a user-friendly reminder system for employees to
+                                        record daily temperatures during the COVID pandemic.
+                                        Features include direct links to Google Sheets, reminder
+                                        tracking, and automated end-of-day reports to management.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_temperature.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        AutoDoc
+                                        <div id="ProjectTool">Batch, Windows</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        A background backup tool that empowers users to schedule
+                                        folder backups with precision. It intelligently handles
+                                        missing folders, path errors, duplicates, and provides
+                                        comprehensive logs.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_autodoc.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Server Manager
+                                        <div id="ProjectTool">PowerShell, Windows</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Engineered a script to monitor server statuses on the
+                                        network, providing real-time updates, change timestamps, and
+                                        the capability to restart or shut down servers as needed.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_powershell.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        BlockRide
+                                        <div id="ProjectTool">HTML, CSS, JavaScript</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        A thrilling game reminiscent of SkyRoads, challenging
+                                        players to navigate 10 levels while evading flying
+                                        obstacles.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_game.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        CalculatoR
+                                        <div id="ProjectTool">C#, Windows Forms</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        A classic calculator app with common functionality for
+                                        Windows users, combining functionality with aesthetics.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_calculator.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        This Website
+                                        <div id="ProjectTool">HTML, CSS, JavaScript, Bootstrap</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Revamped my personal website, harnessing JavaScript and
+                                        Bootstrap for responsiveness, enhanced aesthetics with
+                                        Google Fonts, integrated a map, and introduced captivating
+                                        animations.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_website.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <h2 id="GeneralTitle3">Embedded</h2>
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Magic Mirror
+                                        <div id="ProjectTool">Python + Raspberry Pi</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Crafted a smart mirror using a two-way glass overlay on a
+                                        Raspberry Pi-powered monitor. This innovative mirror
+                                        displays real-time information, including the time, weather
+                                        updates, latest news, and daily motivational quotes.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_mirror.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Prototype for a military communication board
+                                        <div id="ProjectTool">VHDL + Spartan FPGA</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        In my second year of college, I contributed to a significant
+                                        project at a military base. I played a pivotal role in
+                                        designing a board later mass-produced and installed on
+                                        military aircraft. The board featured an FPGA running on
+                                        VHDL code, voltage and data converters, RAM, and an LCD.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_projectant.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Automated RF Test Station
+                                        <div id="ProjectTool">C + ARM Cortex-M</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        During my third work term, I developed an automated RF test
+                                        environment. A user-friendly CLI offers functionality to
+                                        efficiently measure the S-parameters of boards and
+                                        components, streamlining the testing process.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_redline.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Maintenance Server
+                                        <div id="ProjectTool">Python, ROS</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        During my fourth work term, I developed a Python-based
+                                        testing service, integral to the ROS system of self-driving
+                                        robots. This service revolutionized the assembly and field
+                                        maintenance processes by executing both manual and automated
+                                        tests on the robot's hardware. Its efficiency not only saved
+                                        valuable time but also enhanced the reliability of the
+                                        robots.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_maintenanceServer.png"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        TeslaToy
+                                        <div id="ProjectTool">C + Arduino</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        During a hackathon event, I collaborated with two friends to
+                                        transform a conventional toy into an interactive
+                                        user-following car. The car utilized GPS and accelerometer
+                                        data from the user's phone to autonomously track and follow
+                                        them, controlled by an Arduino.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_teslatoy.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Tempocute
+                                        <div id="ProjectTool">C + Arduino</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        This charming gadget displays temperature in both Celsius
+                                        and Fahrenheit when clapped twice. Powered by A4 batteries,
+                                        it adapts its display color based on ambient light
+                                        conditions, combining functionality with a touch of whimsy.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_tempocute.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Greenhouse Watcher
+                                        <div id="ProjectTool">C + MSP430</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        As part of a school project, a friend and I designed an
+                                        agriculture monitoring system for greenhouses. This system
+                                        managed temperature and soil moisture in different zones by
+                                        controlling ventilation and aggregation motors. Data was
+                                        displayed on an LCD, and the system could be controlled via
+                                        a CLI. We also designed and ordered a custom PCB for the
+                                        final prototype.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_ece298.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        TouchClock
+                                        <div id="ProjectTool">Java</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Crafted a touch-controlled clock using the ST Discovery
+                                        board and their GUI software, offering an elegant and
+                                        interactive time-telling experience.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_clock.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Flipper
+                                        <div id="ProjectTool">C, Java + Arduino, Android</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        During another hackathon, a friend and I engineered a device
+                                        that flips book pages as the user reads. Controlled by the
+                                        user's voice commands or an Android app, a simple "Forward"
+                                        or "Backward" would trigger page turns, offering a unique
+                                        reading experience.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_flipper.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Simon Says
+                                        <div id="ProjectTool">C++ + Omega2</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        As part of a programming course, two friends and I developed
+                                        an engaging Simon Says game. Featuring vibrant lights,
+                                        captivating sounds, and ten challenging levels, the game
+                                        also analyzed and presented statistics on the performance of
+                                        different player groups.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_simon.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Lightus
+                                        <div id="ProjectTool">Hardware</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        In college, I designed a small board to automatically
+                                        illuminate dark drawers and shelves when opened. Integrated
+                                        with LEDs and sensors, it sensed darkness and open drawers
+                                        or shelves, enhancing convenience in everyday life.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_lightus.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Car Stuff
+                                        <div id="ProjectTool">Hardware</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Collaborating with my dad, we enhanced my car's
+                                        functionality with reverse and tire pressure sensors,
+                                        stylish lighting, a reverse camera, GPS capabilities, a
+                                        touchscreen interface, and more.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_car.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <h2 id="GeneralTitle3">Non-Technical</h2>
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Music
+                                        <div id="ProjectTool">Fruity Loops</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        Throughout high school and college, I passionately played
+                                        the guitar, collaborated with friends to create covers, and
+                                        recorded original songs. It was a proud moment when one of
+                                        my compositions was featured on the radio.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_fruityloops.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Editing
+                                        <div id="ProjectTool">Adobe Creative Suite</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        In my free time, I embarked on a creative exploration of
+                                        visual storytelling. I honed my skills in Adobe Photoshop,
+                                        After Effects, and Flash, enabling me to craft captivating
+                                        animations, as well as edit and enhance photos and videos
+                                        with precision.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_photoshop.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h3 id="GeneralTitleSmall3">
+                                        Drawing
+                                        <div id="ProjectTool">pen and paper</div>
+                                    </h3>
+                                    <p id="GeneralText3">
+                                        During my high school years, I immersed myself in the world
+                                        of art and creativity. I channeled my imagination into
+                                        drawing comics and anime, producing visually captivating and
+                                        imaginative pieces that reflected my passion for
+                                        storytelling through art.
+                                    </p>
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <img
+                                        src="pics/projects/p_drawing.jpg"
+                                        class="img-thumbnail right"
+                                        id="ProjectPic"
+                                        alt="Project pic failed to load" />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+
+                        <!-------------------------------------------------- Tab 4 -------------------------------------------------->
+                        <div id="Contact" class="container tab-pane fadeIn">
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h2 id="GeneralTitle4">University</h2>
+                                    <br />
+                                    <p id="GeneralText4">
+                                        Email:
+                                        <a
+                                            href="mailto:atsimkin@uwaterloo.ca"
+                                            title="My University email"
+                                            id="email"
+                                            target="_blank">
+                                            atsimkin@uwaterloo.ca
+                                        </a>
+                                        &nbsp;
+                                        <button onclick="copyText('#email')" title="Copy my email">
+                                            Copy
+                                        </button>
+                                    </p>
+                                    <br />
+                                    <p id="GeneralText4">
+                                        University:
+                                        <a
+                                            href="https://uwaterloo.ca/"
+                                            target="_blank"
+                                            title="My University">
+                                            University of Waterloo
+                                        </a>
+                                    </p>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div id="map"></div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h2 id="GeneralTitle4">Personal</h2>
+                                    <br />
+                                    <p id="GeneralText4">
+                                        Github:
+                                        <a
+                                            href="https://github.com/artiomtz"
+                                            target="_blank"
+                                            title="My Github">
+                                            artiomtz
+                                        </a>
+                                    </p>
+                                    <br />
+                                    <p id="GeneralText4">
+                                        Address:
+                                        <a
+                                            href="https://www.google.co.il/maps/place/Waterloo,+ON"
+                                            target="_blank"
+                                            title="My address">
+                                            Waterloo, Ontario, Canada
+                                        </a>
+                                    </p>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div>
+                                        <ul id="contacts">
+                                            <li>
+                                                <a
+                                                    href="https://www.linkedin.com/in/artiom-tsimkin"
+                                                    class="fa fa-linkedin"
+                                                    title="My LinkedIn"
+                                                    target="_blank"></a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="mailto:artiomtz@gmail.com"
+                                                    class="fa fa-google"
+                                                    title="My Gmail"
+                                                    target="_blank"></a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.facebook.com/artiomtz"
+                                                    class="fa fa-facebook"
+                                                    title="My Facebook"
+                                                    target="_blank"></a>
+                                            </li>
+                                            &nbsp; &nbsp;
+                                        </ul>
+                                    </div>
+                                    <br />
+                                    <img
+                                        src="pics/signature.png"
+                                        id="signature"
+                                        alt="My signature failed to load" />
+                                    <br />
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div class="container-fluid text-center">
+                    <div class="jumbotron">
+                        <p id="foot">&copy; Artiom Tsimkin University of Waterloo &copy;</p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="animationCopyRight">Background animation belongs to Julian Garnier</p>
+            <p></p>
+        </div>
+    </body>
 </html>

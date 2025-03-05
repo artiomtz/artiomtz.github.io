@@ -3,490 +3,500 @@
 /* ################################ General ################################ */
 
 .content {
-  position: sticky;
-  bottom: 0%;
-  z-index: 1;
-  opacity: 0.85;
+    position: sticky;
+    bottom: 0%;
+    z-index: 1;
+    opacity: 0.85;
 }
 
 .background {
-  position: fixed;
-  z-index: -1;
+    position: fixed;
+    z-index: -1;
 }
 
 body {
-  background: url(pics/backgrounds/Background.jpg) repeat;
-  background-size: 100%;
-  position: relative;
+    background: url(pics/backgrounds/Background.jpg) repeat;
+    background-size: 100%;
+    position: relative;
 }
 
 .anim,
 .anim svg {
-  position: relative;
-  bottom: 50px;
-  right: 35%;
-  width: 250%;
-  float: center;
+    position: relative;
+    bottom: 50px;
+    right: 35%;
+    width: 250%;
+    float: center;
 }
 
 .anim path {
-  stroke-width: 0.5;
+    stroke-width: 0.5;
 }
 
 .fadeIn {
-  animation-duration: 2s;
+    animation-duration: 2s;
 }
 
 .jumbotron {
-  color: red;
-  font-size: 280%;
-  background: url(pics/backgrounds/Top_Background.jpg) no-repeat center fixed;
-  background-size: cover;
-  font-family: "Papyrus", "Waiting for the Sunrise", "Viner Hand ITC",
-    "Kristen ITC", "Times New Roman";
-  padding-top: 20px;
-  height: 100px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000;
-  border-radius: 10px;
+    color: red;
+    font-size: 280%;
+    background: url(pics/backgrounds/Top_Background.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Papyrus', 'Waiting for the Sunrise', 'Viner Hand ITC', 'Kristen ITC',
+        'Times New Roman', sans-serif;
+    padding-top: 20px;
+    height: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000;
+    border-radius: 10px;
 }
 
 .container {
-  border-radius: 10px;
-  padding: 20px;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .nav {
-  bottom: 10px;
+    bottom: 10px;
 }
 
 #page {
-  background: none;
-  background-color: trasparent;
-  font-family: "Matura MT Script Capitals", "Do Hyeon", "Gloria Hallelujah",
-    "Viner Hand ITC", "Comic Sans MS", "Arial";
-  font-size: 110%;
-  padding: 6px;
-  margin: 0px;
-  border-style: outset;
-  border-width: 2px;
+    background: none;
+    background-color: transparent;
+    font-family: 'Matura MT Script Capitals', 'Do Hyeon', 'Gloria Hallelujah', 'Viner Hand ITC',
+        'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 110%;
+    padding: 6px;
+    margin: 0px;
+    border-style: outset;
+    border-width: 2px;
 }
 
 #NavigationBar {
-  position: relative;
-  left: 2%;
-  width: 96%;
+    position: relative;
+    left: 2%;
+    width: 96%;
 }
 
 .nav-link:link {
-  color: LightGray;
+    color: LightGray;
 }
 
 .nav-link:visited {
-  color: LightGray;
+    color: LightGray;
 }
 
 .nav-link:hover {
-  color: gray;
+    color: gray;
 }
 
 .nav-link:active {
-  color: red;
+    color: red;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a {
-  color: #0000cc;
+    color: #0000cc;
 }
 
 #foot {
-  position: relative;
-  top: 18px;
-  text-shadow: 0px -1px 1px #000;
-  font-family: "Papyrus", "Waiting for the Sunrise", "Viner Hand ITC",
-    "Kristen ITC", "Times New Roman";
-  font-weight: bold;
-  font-size: 40%;
+    position: relative;
+    top: 18px;
+    text-shadow: 0px -1px 1px #000;
+    font-family: 'Papyrus', 'Waiting for the Sunrise', 'Viner Hand ITC', 'Kristen ITC',
+        'Times New Roman', sans-serif;
+    font-weight: bold;
+    font-size: 40%;
 }
 
 #animationCopyRight {
-  text-align: center;
-  color: #444444;
-  font-size: 7px;
-  opacity: 0.5;
+    text-align: center;
+    color: #444444;
+    font-size: 7px;
+    opacity: 0.5;
 }
 
 /* ################################ Home ################################ */
 
 #home {
-  background: url(pics/backgrounds/Home_Background.jpg) no-repeat fixed;
-  background-size: 100% 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: black;
+    background: url(pics/backgrounds/Home_Background.jpg) no-repeat fixed;
+    background-size: 100% 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: black;
 }
 
 @media screen and (orientation: portrait) {
-  #home {
-    background: url(pics/backgrounds/Mobile_Home_Background.jpg) repeat;
-    background-size: 100%;
-  }
+    #home {
+        background: url(pics/backgrounds/Mobile_Home_Background.jpg) repeat;
+        background-size: 100%;
+    }
 }
 
 #GeneralTitle1 {
-  font-family: "Permanent Marker", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-weight: bold;
-  font-size: 250%;
-  color: black;
+    font-family: 'Permanent Marker', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 250%;
+    color: black;
 }
 
 #GeneralText1 {
-  color: black;
-  font-weight: bold;
-  font-family: "Architects Daughter", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-size: 140%;
-  color: black;
+    color: black;
+    font-weight: bold;
+    font-family: 'Architects Daughter', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 140%;
 }
 
 img#myPic {
-  position: relative;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  border-radius: 50%;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-  background: LightGray;
-  border: #000000;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    background: LightGray;
+    border: #000000;
 }
 
 img#myPic:hover {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
 
 #SkillsBox {
-  position: relative;
-  right: 2%;
-  width: 70%;
+    position: relative;
+    right: 2%;
+    width: 70%;
 }
 
 #SkillsBox > p {
-  margin: 0px;
+    margin: 0px;
 }
 
 #SkillsBox > h2 {
-  text-align: center;
+    text-align: center;
 }
 
 .skillBar {
-  width: 100%;
-  background-color: #ddd;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    background-color: #ddd;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .skills {
-  padding: 23px;
-  margin: 0px;
+    padding: 23px;
+    margin: 0px;
 }
 
 .skill1 {
-  width: 70%;
-  background-color: #b366ff;
+    width: 70%;
+    background-color: #b366ff;
 }
+
 .skill2 {
-  width: 60%;
-  background-color: #2196f3;
+    width: 60%;
+    background-color: #2196f3;
 }
+
 .skill3 {
-  width: 50%;
-  background-color: #4caf50;
+    width: 50%;
+    background-color: #4caf50;
 }
+
 .skill4 {
-  width: 45%;
-  background-color: #ffff4d;
+    width: 45%;
+    background-color: #ffff4d;
 }
+
 .skill5 {
-  width: 40%;
-  background-color: #ff9900;
+    width: 40%;
+    background-color: #ff9900;
 }
+
 .skill6 {
-  width: 25%;
-  background-color: #f44336;
+    width: 25%;
+    background-color: #f44336;
 }
 
 /* ################################ Resume ################################ */
 
 .navbar {
-  font-family: "Rockwell", "Crete Round", "Georgia", "Garamond", "Arial";
-  padding: 1px;
-  margin: 0px;
+    font-family: 'Rockwell', 'Crete Round', 'Georgia', 'Garamond', 'Arial', sans-serif;
+    padding: 1px;
+    margin: 0px;
 }
 
 #Resume {
-  background: url(pics/backgrounds/Resume_Background.jpg) no-repeat center fixed;
-  background-size: cover;
-  font-family: "Verdana", "M PLUS 1p", "Arial";
-  color: #666666;
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: url(pics/backgrounds/Resume_Background.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Verdana', 'M PLUS 1p', 'Arial', sans-serif;
+    color: #666666;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (orientation: portrait) {
-  #Resume {
-    background: url(pics/backgrounds/Mobile_Resume_Background.jpg) repeat;
-    background-size: 100%;
-  }
+    #Resume {
+        background: url(pics/backgrounds/Mobile_Resume_Background.jpg) repeat;
+        background-size: 100%;
+    }
 }
 
 #Resume_h1 {
-  color: black;
-  font-family: "Rockwell", "Crete Round", "Georgia", "Garamond", "Arial";
-  font-weight: bold;
-  font-size: 400%;
-  text-align: center;
+    color: black;
+    font-family: 'Rockwell', 'Crete Round', 'Georgia', 'Garamond', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 400%;
+    text-align: center;
 }
 
 #Resume_h2 {
-  color: black;
-  font-family: "Rockwell", "Crete Round", "Georgia", "Garamond", "Arial";
-  font-weight: bold;
-  font-size: 220%;
+    color: black;
+    font-family: 'Rockwell', 'Crete Round', 'Georgia', 'Garamond', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 220%;
 }
 
 #Resume_h3 {
-  color: #595959;
-  text-decoration: underline;
-  font-family: "Verdana", "M PLUS 1p", "Arial";
-  font-size: 90%;
-  margin: 0px;
+    color: #595959;
+    text-decoration: underline;
+    font-family: 'Verdana', 'M PLUS 1p', 'Arial', sans-serif;
+    font-size: 90%;
+    margin: 0px;
 }
 
 #Resume_h4 {
-  color: #222222;
-  font-size: 140%;
-  font-family: "Rockwell", "Crete Round", "Georgia", "Arial Black";
-  font-weight: bold;
+    color: #222222;
+    font-size: 140%;
+    font-family: 'Rockwell', 'Crete Round', 'Georgia', 'Arial Black', sans-serif;
+    font-weight: bold;
 }
 
 #ResumeBlue {
-  color: #007fab;
+    color: #007fab;
 }
 
 hr.hrLine {
-  border: 1px solid DarkGray;
+    border: 1px solid DarkGray;
 }
 
 ul {
-  list-style-type: circle;
+    list-style-type: circle;
 }
 
 /* ################################ Projects ################################ */
 
 #Projects {
-  background: url(pics/backgrounds/Projects_Background.jpg) no-repeat center
-    fixed;
-  background-size: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: LightGray;
+    background: url(pics/backgrounds/Projects_Background.jpg) no-repeat center fixed;
+    background-size: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: LightGray;
 }
 
 @media screen and (orientation: portrait) {
-  #Projects {
-    background: url(pics/backgrounds/Mobile_Projects_Background.jpg) repeat;
-    background-size: 100%;
-  }
+    #Projects {
+        background: url(pics/backgrounds/Mobile_Projects_Background.jpg) repeat;
+        background-size: 100%;
+    }
 }
 
 #GeneralTitle3 {
-  font-family: "Mali", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-weight: bold;
-  font-size: 350%;
-  color: #6f4c29;
+    font-family: 'Mali', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 350%;
+    color: #6f4c29;
 }
 
 #GeneralTitleSmall3 {
-  color: gray;
-  font-weight: bold;
-  font-family: "Mali", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-size: 230%;
-  color: #ff8912;
+    font-weight: bold;
+    font-family: 'Mali', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 230%;
+    color: #ff8912;
 }
 
 #GeneralText3 {
-  color: black;
-  font-weight: bold;
-  font-family: "Mali", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-size: 150%;
-  color: #ffe7ce;
+    font-weight: bold;
+    font-family: 'Mali', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 150%;
+    color: #ffe7ce;
 }
 
 #ProjectTool {
-  font-size: 50%;
-  color: #6f4c29;
+    font-size: 50%;
+    color: #6f4c29;
 }
 
 #ProjectPic {
-  position: relative;
-  top: 5%;
-  border-radius: 10px;
-  background: #6f4c29;
-  border: #000000;
+    position: relative;
+    top: 5%;
+    border-radius: 10px;
+    background: #6f4c29;
+    border: #000000;
 }
 
 .carousel {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-inner img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .progress-bar {
-  position: fixed;
-  top: 0px;
-  left: 5%;
-  height: 20px;
-  z-index: 1;
-  background: #ff6600;
-  opacity: 0.8;
+    position: fixed;
+    top: 0px;
+    left: 5%;
+    height: 20px;
+    z-index: 1;
+    background: #ff6600;
+    opacity: 0.8;
 }
 
 /* ################################ Contact ################################ */
 
 #Contact {
-  background: url(pics/backgrounds/Contact_Background.jpg) no-repeat top fixed;
-  background-size: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: url(pics/backgrounds/Contact_Background.jpg) no-repeat top fixed;
+    background-size: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (orientation: portrait) {
-  #Contact {
-    background: url(pics/backgrounds/Mobile_Contact_Background.jpg) no-repeat;
-    background-size: 100% 100%;
-  }
+    #Contact {
+        background: url(pics/backgrounds/Mobile_Contact_Background.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
 }
 
 #GeneralTitle4 {
-  font-family: "Permanent Marker", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-weight: bold;
-  font-size: 250%;
-  color: black;
+    font-family: 'Permanent Marker', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 250%;
+    color: black;
 }
 
 #GeneralText4 {
-  color: black;
-  font-weight: bold;
-  font-family: "Architects Daughter", "Kristen ITC", "Comic Sans MS", "Arial";
-  font-size: 140%;
-  color: black;
+    font-weight: bold;
+    font-family: 'Architects Daughter', 'Kristen ITC', 'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 140%;
+    color: black;
 }
 
 .fa {
-  padding: 15px;
-  font-size: 50px;
-  width: 80px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+    padding: 15px;
+    font-size: 50px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
 
 .fa:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .fa-facebook {
-  background: #3b5998;
-  color: white;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    background: #3b5998;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    background: #dd4b39;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .fa-linkedin {
-  background: #007bb5;
-  color: white;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    background: #007bb5;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 #map {
-  height: 220px;
-  width: 290px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  left: 2%;
+    height: 220px;
+    width: 290px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    left: 2%;
 }
 
 button {
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  color: #4f4f4f;
-  opacity: 0.5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #4f4f4f;
+    opacity: 0.5;
 }
 
 #contacts {
-  list-style: none;
-  white-space: nowrap;
-  margin-right: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
+    list-style: none;
+    white-space: nowrap;
+    margin-right: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 #contacts > li {
-  display: inline-block;
-  margin-right: 2px;
-  padding-right: 3px;
-  margin-left: 2px;
-  padding-left: 3px;
+    display: inline-block;
+    margin-right: 2px;
+    padding-right: 3px;
+    margin-left: 2px;
+    padding-left: 3px;
 }
 
 #signature {
-  max-width: 300px;
-  margin: 5px;
-  padding: 5px;
+    max-width: 300px;
+    margin: 5px;
+    padding: 5px;
 }
